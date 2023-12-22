@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc4ii82jxh2aj"]
+
+[ext_resource type="Script" path="res://Elements/Trap/Spiks.gd" id="1_qv5q3"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dbpdm"]
+a = Vector2(-41460.3, 2835.83)
+b = Vector2(30219.7, 2835.83)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5pdyn"]
+
+[node name="LoseLevel" type="StaticBody2D"]
+collision_layer = 8
+script = ExtResource("1_qv5q3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10772.3, 4332.17)
+shape = SubResource("SegmentShape2D_dbpdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_5pdyn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

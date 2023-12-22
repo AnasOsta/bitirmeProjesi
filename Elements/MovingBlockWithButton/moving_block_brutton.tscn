@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1k75ormie4rd"]
+
+[ext_resource type="Script" path="res://Elements/MovingBlockWithButton/MovingBlockWithButton.gd" id="1_am1i3"]
+[ext_resource type="Texture2D" uid="uid://cuahp3v1ivnvr" path="res://Image/asset3/14-TileSets/Decorations (32x32).png" id="2_y2vxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqt3f"]
+size = Vector2(34, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb7cv"]
+
+[node name="MovingBlockWithButton" type="PathFollow2D"]
+rotates = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." node_paths=PackedStringArray("path_follow")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_am1i3")
+path_follow = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("2_y2vxu")
+region_enabled = true
+region_rect = Rect2(159.726, 31.8037, 32.6443, 8.11163)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_nqt3f")
+
+[node name="Button" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(79, 0)
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D/Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Button/Area2D"]
+shape = SubResource("RectangleShape2D_qb7cv")
+
+[connection signal="body_entered" from="StaticBody2D/Button/Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]

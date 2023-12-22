@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://r00e7d7oa8pl"]
+
+[ext_resource type="Texture2D" uid="uid://ys0er17yxpo" path="res://icon.svg" id="1_idvdu"]
+[ext_resource type="PackedScene" uid="uid://ci6ccgmbn1d7x" path="res://Character/Player/playerWithSowrd.tscn" id="3_jw5hx"]
+[ext_resource type="PackedScene" uid="uid://coe186f140xxo" path="res://Character/Enine/canon/canon.tscn" id="3_y5625"]
+[ext_resource type="PackedScene" uid="uid://cnj81aw7tysex" path="res://Elements/Block/block.tscn" id="4_kv1dy"]
+[ext_resource type="PackedScene" uid="uid://c7nxjytxo3nsk" path="res://Character/Enine/Explorer/full_explorer.tscn" id="5_wn1ji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5w2p"]
+size = Vector2(1348, 37)
+
+[node name="test" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(513, 175.5)
+scale = Vector2(10.9219, 0.789063)
+texture = ExtResource("1_idvdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(522, 143.5)
+shape = SubResource("RectangleShape2D_a5w2p")
+
+[node name="Player" parent="." instance=ExtResource("3_jw5hx")]
+position = Vector2(-105.5, 43)
+collision_layer = 9
+collision_mask = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Canon" parent="." instance=ExtResource("3_y5625")]
+position = Vector2(225, 111)
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2(-202, 130)
+
+[node name="Block" parent="Node" instance=ExtResource("4_kv1dy")]
+
+[node name="FullExplorer" parent="." instance=ExtResource("5_wn1ji")]
+position = Vector2(386, 88)
+
+[node name="Right" parent="FullExplorer" index="0"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Left" parent="FullExplorer" index="1"]
+collision_layer = 16
+collision_mask = 0
+
+[editable path="FullExplorer"]

@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://b54qwkjg3j5bx"]
+
+[ext_resource type="Script" path="res://Levels/GameUI/game_ui.gd" id="1_ii2oj"]
+[ext_resource type="FontFile" uid="uid://buxtdsfdcx5i6" path="res://Font/I-pixel-u.ttf" id="2_5ugua"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duykc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h0ts0"]
+font = ExtResource("2_5ugua")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_jy8y8"]
+line_spacing = 0.1
+font = ExtResource("2_5ugua")
+font_size = 28
+font_color = Color(0.627451, 0.345098, 0.00392157, 0.592157)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_ii2oj")
+
+[node name="Score" type="Panel" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_right = 90.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_duykc")
+
+[node name="Score" type="Label" parent="Score"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -22.5
+offset_right = -1.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "123"
+label_settings = SubResource("LabelSettings_h0ts0")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Score"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 37.0
+text = "score"
+label_settings = SubResource("LabelSettings_jy8y8")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="Score"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = -1.0
+offset_right = 163.0
+offset_bottom = 34.0
+text = ":"
+label_settings = SubResource("LabelSettings_jy8y8")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf8y35kouipgo"]
+
+[ext_resource type="Texture2D" uid="uid://7yltph6x6nfw" path="res://Image/asset1/Merchant Ship/Ship/Ship/Idle/1.png" id="1_fjxyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvfr2"]
+size = Vector2(77, 16)
+
+[node name="Ship" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fjxyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_uvfr2")

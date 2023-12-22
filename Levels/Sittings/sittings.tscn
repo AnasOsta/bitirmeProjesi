@@ -1,0 +1,433 @@
+[gd_scene load_steps=46 format=3 uid="uid://b3t8f4exakuj8"]
+
+[ext_resource type="Texture2D" uid="uid://bnc7rpj2w370i" path="res://Image/asset1/Wood and Paper UI/Prefabs/2.png" id="1_hmw0c"]
+[ext_resource type="Script" path="res://Levels/Sittings/sittings.gd" id="1_xbl2x"]
+[ext_resource type="Texture2D" uid="uid://cf7igwghtsxf4" path="res://Image/asset1/Wood and Paper UI/Green Board/10.png" id="2_sxtml"]
+[ext_resource type="Texture2D" uid="uid://c81eaiq61otps" path="res://Image/asset1/Wood and Paper UI/Prefabs/7.png" id="2_xhcrk"]
+[ext_resource type="Texture2D" uid="uid://c4drv0v8bj1mf" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/13.png" id="3_n8g6x"]
+[ext_resource type="Texture2D" uid="uid://d0a3utcfdsawv" path="res://Image/asset1/Wood and Paper UI/Green Board/11.png" id="3_ypc37"]
+[ext_resource type="Texture2D" uid="uid://dud6kybpuuj0t" path="res://Image/asset1/Wood and Paper UI/Green Board/12.png" id="4_1ek2q"]
+[ext_resource type="Texture2D" uid="uid://njj7x8raf4ka" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/21.png" id="4_701ga"]
+[ext_resource type="Texture2D" uid="uid://do1awguqwn32t" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/19.png" id="5_3cr4r"]
+[ext_resource type="Texture2D" uid="uid://b030f7w2cenb7" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/9.png" id="6_wx86q"]
+[ext_resource type="Texture2D" uid="uid://dkfimnj76gt1j" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/3.png" id="7_lqwjy"]
+[ext_resource type="Texture2D" uid="uid://6ehjnpj86eay" path="res://Image/asset1/Wood and Paper UI/Green Button/1.png" id="8_7ubq1"]
+[ext_resource type="Texture2D" uid="uid://cor72qt0dv40h" path="res://Image/asset1/Wood and Paper UI/Yellow Paper/10.png" id="8_fhnku"]
+[ext_resource type="Texture2D" uid="uid://c1gx16eqn2f6j" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/6.png" id="9_bu5l7"]
+[ext_resource type="Texture2D" uid="uid://bybscsqaiafpj" path="res://Image/asset1/Wood and Paper UI/Yellow Paper/11.png" id="9_j3j8l"]
+[ext_resource type="Texture2D" uid="uid://cy7y1u7pu8pew" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/5.png" id="10_1x0vy"]
+[ext_resource type="Texture2D" uid="uid://lvlmf2a54st6" path="res://Image/asset1/Wood and Paper UI/Yellow Paper/12.png" id="10_txx72"]
+[ext_resource type="Texture2D" uid="uid://1b5igbmuw1b7" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/6.png" id="11_gp1o3"]
+[ext_resource type="Texture2D" uid="uid://rkk6vqp3lo42" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/24.png" id="12_tlnxp"]
+[ext_resource type="Texture2D" uid="uid://dl33rjh6xl3w5" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/22.png" id="16_7ds1t"]
+[ext_resource type="Texture2D" uid="uid://sh0sfqb1y6al" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/15.png" id="17_hwpsc"]
+[ext_resource type="Texture2D" uid="uid://bnre22mn4ie1b" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/12.png" id="18_g7j77"]
+[ext_resource type="Texture2D" uid="uid://c1n3eb8ji8dp6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/5.png" id="19_37q7b"]
+[ext_resource type="Texture2D" uid="uid://b6b4b1b7paahy" path="res://Image/asset1/Wood and Paper UI/Orange Paper/10.png" id="23_8bo23"]
+[ext_resource type="Texture2D" uid="uid://cykytv8pmekfy" path="res://Image/asset1/Wood and Paper UI/Orange Paper/11.png" id="24_0jh2v"]
+[ext_resource type="Texture2D" uid="uid://caefclq0iadux" path="res://Image/asset1/Wood and Paper UI/Orange Paper/12.png" id="25_6r1rf"]
+[ext_resource type="Texture2D" uid="uid://chfij0i60c5vr" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/20.png" id="26_nmcl3"]
+[ext_resource type="Texture2D" uid="uid://c1cys4qkg1tdc" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/14.png" id="27_36028"]
+[ext_resource type="Texture2D" uid="uid://cfj8phjeyode6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/7.png" id="28_kn8o8"]
+[ext_resource type="Texture2D" uid="uid://urxnxbnq6brb" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/1.png" id="29_rcs37"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vr01"]
+texture = ExtResource("1_hmw0c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nekqk"]
+texture = ExtResource("2_xhcrk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6qwh"]
+texture = ExtResource("8_7ubq1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2v6i"]
+texture = ExtResource("8_fhnku")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txvwf"]
+texture = ExtResource("9_j3j8l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40j41"]
+texture = ExtResource("10_txx72")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssvsm"]
+texture = ExtResource("2_sxtml")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn5r5"]
+texture = ExtResource("3_ypc37")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_naeqf"]
+texture = ExtResource("3_ypc37")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xuxr6"]
+texture = ExtResource("4_1ek2q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3uri"]
+texture = ExtResource("23_8bo23")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8je2"]
+texture = ExtResource("24_0jh2v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsfe8"]
+texture = ExtResource("24_0jh2v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obubw"]
+texture = ExtResource("25_6r1rf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xnou5"]
+texture = ExtResource("8_7ubq1")
+
+[node name="Sittings" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_xbl2x")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1025.0
+offset_bottom = 646.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1024.0
+offset_bottom = 643.0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6vr01")
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -8.0
+offset_right = 662.0
+offset_bottom = 333.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nekqk")
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(221, 128)
+scale = Vector2(6, 6)
+texture = ExtResource("3_n8g6x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(253, 128)
+scale = Vector2(6, 6)
+texture = ExtResource("4_701ga")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(285, 128)
+scale = Vector2(6, 6)
+texture = ExtResource("5_3cr4r")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(319, 128)
+scale = Vector2(6, 6)
+texture = ExtResource("6_wx86q")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(352, 128)
+scale = Vector2(6, 6)
+texture = ExtResource("7_lqwjy")
+
+[node name="Music" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 88.0
+offset_right = 493.0
+offset_bottom = 163.0
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g6qwh")
+icon = ExtResource("8_7ubq1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/Music"]
+position = Vector2(41, 30)
+scale = Vector2(5, 5)
+texture = ExtResource("9_bu5l7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/Music"]
+visible = false
+position = Vector2(38, 32)
+scale = Vector2(5, 5)
+texture = ExtResource("10_1x0vy")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(221, 203)
+scale = Vector2(6, 6)
+texture = ExtResource("5_3cr4r")
+
+[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(257, 203)
+scale = Vector2(6, 6)
+texture = ExtResource("11_gp1o3")
+
+[node name="Sprite2D8" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+position = Vector2(294, 203)
+scale = Vector2(6, 6)
+texture = ExtResource("12_tlnxp")
+
+[node name="SFX" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 162.0
+offset_right = 493.0
+offset_bottom = 237.0
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g6qwh")
+icon = ExtResource("8_7ubq1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/SFX"]
+position = Vector2(41, 30)
+scale = Vector2(5, 5)
+texture = ExtResource("9_bu5l7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/SFX"]
+visible = false
+position = Vector2(38, 32)
+scale = Vector2(5, 5)
+texture = ExtResource("10_1x0vy")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 232.0
+offset_right = 74.0
+offset_bottom = 272.0
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxTexture_v2v6i")
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_txvwf")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 119.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_txvwf")
+
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+layout_mode = 0
+offset_left = 119.333
+offset_right = 159.333
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_txvwf")
+
+[node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+layout_mode = 0
+offset_left = 140.333
+offset_right = 180.333
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_40j41")
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(64.3333, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_7ds1t")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(76, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("17_hwpsc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(88.3333, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("18_g7j77")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(99.3333, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("4_701ga")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(110.667, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("3_n8g6x")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel2"]
+position = Vector2(122, 20.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("19_37q7b")
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 307.0
+offset_right = 474.0
+offset_bottom = 387.0
+value = 100.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ssvsm")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tn5r5")
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_naeqf")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer4"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_naeqf")
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer5"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_naeqf")
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer6"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xuxr6")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j3uri")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8je2")
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xsfe8")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+
+[node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_obubw")
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-259, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("5_3cr4r")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-223, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("6_wx86q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-189, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("26_nmcl3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-153, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("26_nmcl3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-117, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("6_wx86q")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-83, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("27_36028")
+
+[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer4/Panel4"]
+position = Vector2(-49, 57)
+scale = Vector2(6, 6)
+texture = ExtResource("28_kn8o8")
+
+[node name="Prev" type="Button" parent="."]
+offset_left = 207.0
+offset_top = -1.0
+offset_right = 307.0
+offset_bottom = 99.0
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xnou5")
+icon = ExtResource("8_7ubq1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Prev"]
+position = Vector2(51, 43)
+scale = Vector2(6, 6)
+texture = ExtResource("29_rcs37")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/Music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel/SFX" to="." method="_on_sfx_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Prev" to="." method="_on_prev_pressed"]

@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://bk7rmt03pwmj6"]
+
+[ext_resource type="Script" path="res://Character/Enine/canon/canon_ball.gd" id="1_bnlxr"]
+[ext_resource type="Texture2D" uid="uid://o6frxve8i3dq" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/1.png" id="1_vulle"]
+[ext_resource type="Texture2D" uid="uid://b5u58dv0hgbpv" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/2.png" id="2_shf5j"]
+[ext_resource type="Texture2D" uid="uid://ctf7g2r6v3vl" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/3.png" id="3_63eh0"]
+[ext_resource type="Texture2D" uid="uid://llxn2yi6t4wh" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/4.png" id="4_odnwt"]
+[ext_resource type="Texture2D" uid="uid://bxeuqucie540g" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/5.png" id="5_0qhk1"]
+[ext_resource type="Texture2D" uid="uid://w8cud07hbxwc" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/6.png" id="6_thddx"]
+[ext_resource type="Texture2D" uid="uid://cfv4ax3ubop0m" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Explosion/7.png" id="7_3vgr2"]
+[ext_resource type="Texture2D" uid="uid://cjry3eb55f28a" path="res://Image/asset1/Shooter Traps/Cannon/Cannon Ball Idle/1.png" id="8_gn6y6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aiwvw"]
+radius = 7.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnsjr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vulle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_shf5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_63eh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_odnwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0qhk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_thddx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3vgr2")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gn6y6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acww8"]
+radius = 7.07107
+
+[node name="CanonBall" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_bnlxr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aiwvw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lnsjr")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_acww8")
+debug_color = Color(0.980392, 0, 0.384314, 0.419608)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7nxjytxo3nsk"]
+
+[ext_resource type="PackedScene" uid="uid://colukc3v4xl03" path="res://Character/Enine/Explorer/explorer.tscn" id="1_qx0rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rygbk"]
+size = Vector2(8, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf887"]
+size = Vector2(8, 480)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_einpj"]
+a = Vector2(6.5, -183)
+b = Vector2(6.5, 153)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uf6p2"]
+a = Vector2(-9, -182)
+b = Vector2(-9, 130)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_crpiv"]
+a = Vector2(-0.25, -182.75)
+b = Vector2(-0.25, 153.25)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2rvbm"]
+a = Vector2(0.558502, -184.69)
+b = Vector2(0.558502, 127.31)
+
+[node name="FullExplorer" type="Node2D"]
+
+[node name="Explorer" parent="." instance=ExtResource("1_qx0rm")]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Left" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-338, 32)
+shape = SubResource("RectangleShape2D_rygbk")
+
+[node name="Right" type="CollisionShape2D" parent="Wall"]
+position = Vector2(294, 32)
+shape = SubResource("RectangleShape2D_lf887")
+
+[node name="ExitArea" type="Area2D" parent="Wall"]
+position = Vector2(294, 32)
+
+[node name="Right" type="CollisionShape2D" parent="Wall/ExitArea"]
+position = Vector2(5.5, -1)
+shape = SubResource("SegmentShape2D_einpj")
+
+[node name="Left" type="CollisionShape2D" parent="Wall/ExitArea"]
+position = Vector2(-635, -18)
+shape = SubResource("SegmentShape2D_uf6p2")
+
+[node name="EntredArea" type="Area2D" parent="Wall"]
+
+[node name="Right" type="CollisionShape2D" parent="Wall/EntredArea"]
+position = Vector2(282.25, 30.75)
+shape = SubResource("SegmentShape2D_crpiv")
+
+[node name="Left" type="CollisionShape2D" parent="Wall/EntredArea"]
+position = Vector2(-326.559, 16.6898)
+shape = SubResource("SegmentShape2D_2rvbm")
+
+[connection signal="body_exited" from="Wall/ExitArea" to="Explorer" method="_on_exite_area"]
+[connection signal="body_exited" from="Wall/EntredArea" to="Explorer" method="_on_entred_area"]

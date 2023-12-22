@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5b70r7pa2mjm"]
+
+[ext_resource type="Script" path="res://Elements/Transitions/WhiteToBlack/trans_black.gd" id="1_ydk84"]
+
+[sub_resource type="Animation" id="Animation_dh6v7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c5k4s"]
+resource_name = "des"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aiuqh"]
+_data = {
+"RESET": SubResource("Animation_dh6v7"),
+"des": SubResource("Animation_c5k4s")
+}
+
+[node name="TransBlack" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_ydk84")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1327.0
+offset_bottom = 823.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_aiuqh")
+}

@@ -1,0 +1,80 @@
+[gd_scene load_steps=14 format=3 uid="uid://fdos3xv3cyao"]
+
+[ext_resource type="Texture2D" uid="uid://dbaqjuxyaymf" path="res://Image/asset2/7-Objects/2-Door/3-Closing/1.png" id="1_qwmxe"]
+[ext_resource type="Texture2D" uid="uid://dewaiwbesypxt" path="res://Image/asset2/7-Objects/2-Door/3-Closing/2.png" id="2_nq4bv"]
+[ext_resource type="Texture2D" uid="uid://gb5cc1ocplmp" path="res://Image/asset2/7-Objects/2-Door/3-Closing/3.png" id="3_riwhs"]
+[ext_resource type="Texture2D" uid="uid://dda2ypnti4ojh" path="res://Image/asset2/7-Objects/2-Door/3-Closing/4.png" id="4_kcos7"]
+[ext_resource type="Texture2D" uid="uid://bgh8x37g5rs7u" path="res://Image/asset2/7-Objects/2-Door/3-Closing/5.png" id="5_srs61"]
+[ext_resource type="Texture2D" uid="uid://bxhf1a4fh7mjm" path="res://Image/asset2/7-Objects/2-Door/2-Opening/1.png" id="6_fmnus"]
+[ext_resource type="Texture2D" uid="uid://dfaqgr40ceb0n" path="res://Image/asset2/7-Objects/2-Door/2-Opening/2.png" id="7_oyj1o"]
+[ext_resource type="Texture2D" uid="uid://dj4lef1unr71v" path="res://Image/asset2/7-Objects/2-Door/2-Opening/3.png" id="8_dya20"]
+[ext_resource type="Texture2D" uid="uid://dv6784y8alsgw" path="res://Image/asset2/7-Objects/2-Door/2-Opening/4.png" id="9_d0v3p"]
+[ext_resource type="Texture2D" uid="uid://sldk7igsih7g" path="res://Image/asset2/7-Objects/2-Door/2-Opening/5.png" id="10_n7oea"]
+[ext_resource type="Script" path="res://Elements/Door/door.gd" id="11_c0e5x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnc86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwmxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nq4bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_riwhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kcos7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_srs61")
+}],
+"loop": false,
+"name": &"Closing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fmnus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oyj1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dya20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d0v3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n7oea")
+}],
+"loop": false,
+"name": &"Opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjsde"]
+size = Vector2(24, 82)
+
+[node name="Door" type="AnimatedSprite2D"]
+z_index = -2
+texture_filter = 1
+position = Vector2(-3, 0)
+sprite_frames = SubResource("SpriteFrames_lnc86")
+animation = &"Opening"
+autoplay = "Opening"
+frame = 4
+frame_progress = 1.0
+offset = Vector2(0, -48.1)
+script = ExtResource("11_c0e5x")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(17, -46)
+shape = SubResource("RectangleShape2D_pjsde")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

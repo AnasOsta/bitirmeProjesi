@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://blrab1way72k8"]
+
+[ext_resource type="Script" path="res://Elements/MovingBlock/movingBlock.gd" id="1_u4h1l"]
+[ext_resource type="Texture2D" uid="uid://cuahp3v1ivnvr" path="res://Image/asset3/14-TileSets/Decorations (32x32).png" id="2_7155u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqt3f"]
+size = Vector2(34, 5)
+
+[node name="MovingBlock" type="PathFollow2D"]
+rotates = false
+
+[node name="StaticBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("path_follow")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_u4h1l")
+path_follow = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("2_7155u")
+region_enabled = true
+region_rect = Rect2(159.726, 31.8037, 32.6443, 8.11163)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_nqt3f")
+one_way_collision = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, -0.5)
+scale = Vector2(1, 0.25)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="StaticBody2D" method="_on_visible_on_screen_notifier_2d_screen_entered"]

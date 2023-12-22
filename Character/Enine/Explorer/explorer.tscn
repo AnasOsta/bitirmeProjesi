@@ -1,0 +1,136 @@
+[gd_scene load_steps=18 format=3 uid="uid://colukc3v4xl03"]
+
+[ext_resource type="Script" path="res://Character/Enine/Explorer/explorer.gd" id="1_3kpeu"]
+[ext_resource type="Texture2D" uid="uid://y24b2ju2vptc" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 01.png" id="1_4o3kr"]
+[ext_resource type="Texture2D" uid="uid://1perjplnnhdv" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 02.png" id="2_g0e6l"]
+[ext_resource type="Texture2D" uid="uid://cckonwkgc5etl" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 03.png" id="3_nq75u"]
+[ext_resource type="Texture2D" uid="uid://c3oqm3r6c8q4l" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 04.png" id="4_slfkp"]
+[ext_resource type="Texture2D" uid="uid://c80k1tecf2yx" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 05.png" id="5_djqbh"]
+[ext_resource type="Texture2D" uid="uid://6mefjauken4c" path="res://Image/asset1/The Crusty Crew/Fierce Tooth/02-Run/Run 06.png" id="6_e002i"]
+[ext_resource type="Texture2D" uid="uid://dtxf4urbr1fc" path="res://Image/asset1/The Crusty Crew/Dialogue/Exclamation/Exclamation In 01.png" id="7_06a4a"]
+[ext_resource type="Texture2D" uid="uid://dh1fvx0ercgt3" path="res://Image/asset1/The Crusty Crew/Dialogue/Interrogation/Interrogation In 01.png" id="8_v1suv"]
+[ext_resource type="Texture2D" uid="uid://bfrcjdnswbk1e" path="res://Image/asset1/The Crusty Crew/Dialogue/Interrogation/Interrogation In 02.png" id="9_i7abm"]
+[ext_resource type="Texture2D" uid="uid://dseh00wpsvni6" path="res://Image/asset1/The Crusty Crew/Dialogue/Interrogation/Interrogation Out 01.png" id="10_etl8g"]
+[ext_resource type="Texture2D" uid="uid://df5lf0t2c8kls" path="res://Image/asset1/The Crusty Crew/Dialogue/Interrogation/Interrogation Out 02.png" id="11_sj2l1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e44kw"]
+size = Vector2(16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1jc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4o3kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g0e6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nq75u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_slfkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_djqbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e002i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fm05h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_06a4a")
+}],
+"loop": true,
+"name": &"defualt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_06a4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_v1suv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i7abm")
+}],
+"loop": false,
+"name": &"in",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_etl8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sj2l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_06a4a")
+}],
+"loop": false,
+"name": &"out",
+"speed": 3.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qiwde"]
+a = Vector2(156, 13)
+b = Vector2(-4, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_411m3"]
+size = Vector2(18, 21)
+
+[node name="Explorer" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 8
+collision_mask = 19
+script = ExtResource("1_3kpeu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e44kw")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
+sprite_frames = SubResource("SpriteFrames_k1jc0")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="dialog" type="AnimatedSprite2D" parent="Marker2D"]
+position = Vector2(3, -18)
+sprite_frames = SubResource("SpriteFrames_fm05h")
+animation = &"out"
+autoplay = "defualt"
+
+[node name="Area2D" type="Area2D" parent="Marker2D"]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Marker2D/Area2D"]
+polygon = PackedVector2Array(-9, 0, -78, -32, -78, 16)
+
+[node name="Area2D2" type="Area2D" parent="Marker2D"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Area2D2"]
+position = Vector2(14, -16)
+shape = SubResource("SegmentShape2D_qiwde")
+
+[node name="DeadPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadPlayer"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_411m3")
+debug_color = Color(0.988235, 0, 0.290196, 0.419608)
+
+[connection signal="body_entered" from="Marker2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Marker2D/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Marker2D/Area2D2" to="." method="_player_finded"]
+[connection signal="body_entered" from="DeadPlayer" to="." method="_on_dead_player_body_entered"]

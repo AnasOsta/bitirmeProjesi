@@ -1,0 +1,56 @@
+[gd_scene load_steps=12 format=3 uid="uid://dexvdh7tjamu4"]
+
+[ext_resource type="Texture2D" uid="uid://c0wn4ktx547ad" path="res://Image/asset2/7-Objects/9-Small Chain/1.png" id="1_1q5su"]
+[ext_resource type="Texture2D" uid="uid://bnjw3kplcc4s6" path="res://Image/asset2/7-Objects/9-Small Chain/2.png" id="2_qfb8k"]
+[ext_resource type="Texture2D" uid="uid://dugaju7bqxanh" path="res://Image/asset2/7-Objects/9-Small Chain/3.png" id="3_fpft0"]
+[ext_resource type="Texture2D" uid="uid://bhk45a2vd55r5" path="res://Image/asset2/7-Objects/9-Small Chain/4.png" id="4_qrqkt"]
+[ext_resource type="Texture2D" uid="uid://biecwtamxfyqs" path="res://Image/asset2/7-Objects/9-Small Chain/5.png" id="5_clq3o"]
+[ext_resource type="Texture2D" uid="uid://ughn18fv4f8e" path="res://Image/asset2/7-Objects/9-Small Chain/6.png" id="6_whhl8"]
+[ext_resource type="Texture2D" uid="uid://c15tdtuwsvoha" path="res://Image/asset2/7-Objects/9-Small Chain/7.png" id="7_qn1gb"]
+[ext_resource type="Texture2D" uid="uid://d3se4lnfr5cai" path="res://Image/asset2/7-Objects/9-Small Chain/8.png" id="8_ri6iy"]
+[ext_resource type="Texture2D" uid="uid://dqjd3kak388pa" path="res://Image/asset2/7-Objects/9-Small Chain/9.png" id="9_ndo1i"]
+[ext_resource type="Texture2D" uid="uid://cd0xj6v1ctpxy" path="res://Image/asset2/7-Objects/9-Small Chain/10.png" id="10_rh034"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exmav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1q5su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qfb8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fpft0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qrqkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_clq3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_whhl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qn1gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ri6iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ndo1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rh034")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="SmallChain" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_exmav")
+autoplay = "default"
+frame_progress = 0.315627
