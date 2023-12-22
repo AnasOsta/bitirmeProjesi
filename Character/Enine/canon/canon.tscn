@@ -149,6 +149,7 @@ states/hit/position = Vector2(537, 233)
 states/idle/node = SubResource("AnimationNodeAnimation_1vkd3")
 states/idle/position = Vector2(337, 106)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_upnhw"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_m4mjm"), "idle", "hit", SubResource("AnimationNodeStateMachineTransition_mwvly"), "hit", "dead", SubResource("AnimationNodeStateMachineTransition_grcvd"), "hit", "idle", SubResource("AnimationNodeStateMachineTransition_kybb4"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_rr530")]
+graph_offset = Vector2(33, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clbyv"]
 size = Vector2(214, 20)
@@ -212,6 +213,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_32pfj")
 }

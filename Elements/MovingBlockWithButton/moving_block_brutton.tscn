@@ -1,12 +1,78 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1k75ormie4rd"]
+[gd_scene load_steps=19 format=3 uid="uid://b1k75ormie4rd"]
 
 [ext_resource type="Script" path="res://Elements/MovingBlockWithButton/MovingBlockWithButton.gd" id="1_am1i3"]
 [ext_resource type="Texture2D" uid="uid://cuahp3v1ivnvr" path="res://Image/asset3/14-TileSets/Decorations (32x32).png" id="2_y2vxu"]
+[ext_resource type="Texture2D" uid="uid://7c3sqj8d2skr" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/1.png" id="3_2pim5"]
+[ext_resource type="Texture2D" uid="uid://bnidqej6hcxa1" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/2.png" id="4_bbkeo"]
+[ext_resource type="Texture2D" uid="uid://dqoao8j3873b8" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/3.png" id="5_0omg4"]
+[ext_resource type="Texture2D" uid="uid://dsq87v4ygt3l7" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/4.png" id="6_o6gqv"]
+[ext_resource type="Texture2D" uid="uid://bfo8d8rlgcw7f" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/5.png" id="7_sne0r"]
+[ext_resource type="Texture2D" uid="uid://crge6ijlrg76h" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/6.png" id="8_mlr1p"]
+[ext_resource type="Texture2D" uid="uid://q07ho8mu0djv" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/7.png" id="9_r44wv"]
+[ext_resource type="Texture2D" uid="uid://baukyqx8ixp3f" path="res://Image/asset1/Merchant Ship/Chest Key/Idle/8.png" id="10_i5bbf"]
+[ext_resource type="Texture2D" uid="uid://b7j7wj883ejtx" path="res://Image/asset1/Merchant Ship/Chest Key/Effect/1.png" id="11_8uavu"]
+[ext_resource type="Texture2D" uid="uid://bxiucoxwf62av" path="res://Image/asset1/Merchant Ship/Chest Key/Effect/2.png" id="12_swoa0"]
+[ext_resource type="Texture2D" uid="uid://dqji3equ6jnwr" path="res://Image/asset1/Merchant Ship/Chest Key/Effect/3.png" id="13_1eafa"]
+[ext_resource type="Texture2D" uid="uid://bep3poncm0t0p" path="res://Image/asset1/Merchant Ship/Chest Key/Effect/4.png" id="14_0vljb"]
+[ext_resource type="Texture2D" uid="uid://8pjyptfm25mp" path="res://Image/asset1/Empty.png" id="15_lkbit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqt3f"]
 size = Vector2(34, 5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb7cv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcawi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2pim5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bbkeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0omg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o6gqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sne0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mlr1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r44wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i5bbf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_8uavu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_swoa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1eafa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0vljb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lkbit")
+}],
+"loop": false,
+"name": &"effect",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kl5g"]
+size = Vector2(7, 14)
 
 [node name="MovingBlockWithButton" type="PathFollow2D"]
 rotates = false
@@ -26,13 +92,24 @@ region_rect = Rect2(159.726, 31.8037, 32.6443, 8.11163)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_nqt3f")
+one_way_collision = true
 
-[node name="Button" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(79, 0)
+[node name="Key" type="AnimatedSprite2D" parent="StaticBody2D"]
+modulate = Color(0, 1, 1, 1)
+self_modulate = Color(1, 0.372549, 1, 1)
+position = Vector2(93, 79)
+sprite_frames = SubResource("SpriteFrames_pcawi")
+animation = &"effect"
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
 
-[node name="Area2D" type="Area2D" parent="StaticBody2D/Button"]
+[node name="Area2D" type="Area2D" parent="StaticBody2D/Key"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Button/Area2D"]
-shape = SubResource("RectangleShape2D_qb7cv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Key/Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_1kl5g")
+debug_color = Color(0.772549, 0.443137, 0, 0.419608)
 
-[connection signal="body_entered" from="StaticBody2D/Button/Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="StaticBody2D/Key" to="StaticBody2D" method="_on_key_animation_finished"]
+[connection signal="body_entered" from="StaticBody2D/Key/Area2D" to="StaticBody2D" method="_on_key_body_entered"]

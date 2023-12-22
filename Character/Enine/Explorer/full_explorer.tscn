@@ -3,26 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://colukc3v4xl03" path="res://Character/Enine/Explorer/explorer.tscn" id="1_qx0rm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rygbk"]
-size = Vector2(8, 480)
+size = Vector2(8, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf887"]
-size = Vector2(8, 480)
+size = Vector2(8, 192)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_einpj"]
-a = Vector2(6.5, -183)
-b = Vector2(6.5, 153)
+a = Vector2(6.5, -159)
+b = Vector2(6.5, 33)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uf6p2"]
-a = Vector2(-9, -182)
-b = Vector2(-9, 130)
+a = Vector2(-9, -142)
+b = Vector2(-9, 50)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_crpiv"]
-a = Vector2(-0.25, -182.75)
-b = Vector2(-0.25, 153.25)
+a = Vector2(-0.25, -158.75)
+b = Vector2(-0.25, 33.25)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2rvbm"]
-a = Vector2(0.558502, -184.69)
-b = Vector2(0.558502, 127.31)
+a = Vector2(0.55899, -144.69)
+b = Vector2(0.55899, 47.3102)
 
 [node name="FullExplorer" type="Node2D"]
 
@@ -33,11 +33,11 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="Left" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-338, 32)
+position = Vector2(-338, -32)
 shape = SubResource("RectangleShape2D_rygbk")
 
 [node name="Right" type="CollisionShape2D" parent="Wall"]
-position = Vector2(294, 32)
+position = Vector2(294, -32)
 shape = SubResource("RectangleShape2D_lf887")
 
 [node name="ExitArea" type="Area2D" parent="Wall"]
