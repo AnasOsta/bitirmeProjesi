@@ -1,5 +1,9 @@
 extends Node2D
 
+func _ready():
+	if GameValue.score > GameValue.highestScore:
+		GameValue.highestScore = GameValue.score
+
 func _on_sittings_pressed():
 	TransBlack.change_scene_string("res://Levels/Sittings/sittings.tscn")
 

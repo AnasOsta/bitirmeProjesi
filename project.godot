@@ -25,6 +25,7 @@ GameValue="*res://Global/GameValue.gd"
 [display]
 
 window/size/viewport_width=1024
+window/stretch/mode="canvas_items"
 
 [input]
 

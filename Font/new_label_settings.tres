@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cbnk05d71x21s"]
+
+[ext_resource type="FontFile" uid="uid://buxtdsfdcx5i6" path="res://Font/I-pixel-u.ttf" id="1_wtdmx"]
+
+[resource]
+font = ExtResource("1_wtdmx")
+font_size = 52
+font_color = Color(0.2, 0.196078, 0.239216, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.196078, 0.239216, 1)

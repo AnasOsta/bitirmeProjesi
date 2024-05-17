@@ -1,3 +1,330 @@
-[gd_scene format=3 uid="uid://chm6j6gvknw8v"]
+[gd_scene load_steps=33 format=3 uid="uid://chm6j6gvknw8v"]
+
+[ext_resource type="Script" path="res://Levels/LevelsUI/levels.gd" id="1_7472o"]
+[ext_resource type="Texture2D" uid="uid://bfrt4mxw3u3ju" path="res://Image/asset1/Wood and Paper UI/Prefabs/6.png" id="1_vfmla"]
+[ext_resource type="Texture2D" uid="uid://16cm0w8s1qxo" path="res://Image/asset1/Wood and Paper UI/Yellow Button/1.png" id="2_g70cy"]
+[ext_resource type="Texture2D" uid="uid://dinmkju2hny5o" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/27.png" id="3_50fiq"]
+[ext_resource type="Texture2D" uid="uid://cyhgvefngnjnb" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/28.png" id="4_csdp0"]
+[ext_resource type="Texture2D" uid="uid://bfiau0ntohde6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/29.png" id="5_hj38q"]
+[ext_resource type="Texture2D" uid="uid://cn6kkcq2m0cvn" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/30.png" id="6_ejmw3"]
+[ext_resource type="Texture2D" uid="uid://b25q0nupbeqlj" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/31.png" id="7_gef0h"]
+[ext_resource type="Texture2D" uid="uid://b1lartqix4pu" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/32.png" id="8_buuar"]
+[ext_resource type="Texture2D" uid="uid://y11f63tfy4qs" path="res://Image/asset1/Wood and Paper UI/Big Banner/10.png" id="9_f0xdc"]
+[ext_resource type="Texture2D" uid="uid://b3b3uxfuoud1m" path="res://Image/asset1/Wood and Paper UI/Big Banner/8.png" id="10_m57f7"]
+[ext_resource type="Texture2D" uid="uid://ds0au5581s4mg" path="res://Image/asset1/Wood and Paper UI/Big Banner/12.png" id="11_ipj1o"]
+[ext_resource type="Texture2D" uid="uid://c7bgiav82dm74" path="res://Image/asset1/Wood and Paper UI/Big Banner/21.png" id="12_15b15"]
+[ext_resource type="Texture2D" uid="uid://gg6ng35codo6" path="res://Image/asset1/Wood and Paper UI/Big Banner/23.png" id="13_gejsi"]
+[ext_resource type="Texture2D" uid="uid://dpkfn06tqexia" path="res://Image/asset1/Wood and Paper UI/Big Banner/19.png" id="14_hl053"]
+[ext_resource type="Texture2D" uid="uid://bratlwjbvfqo7" path="res://Image/asset1/Wood and Paper UI/Big Banner/27.png" id="15_cp7vk"]
+[ext_resource type="Texture2D" uid="uid://cxmm33dqko18y" path="res://Image/asset1/Wood and Paper UI/Big Banner/25.png" id="16_0icbo"]
+[ext_resource type="Texture2D" uid="uid://ceni6h63dw77m" path="res://Image/asset1/Wood and Paper UI/Big Banner/29.png" id="17_vi30n"]
+[ext_resource type="Texture2D" uid="uid://b1o4gy72r82tf" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/20.png" id="18_yoow4"]
+[ext_resource type="Texture2D" uid="uid://urxnxbnq6brb" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/1.png" id="19_orsb1"]
+[ext_resource type="Texture2D" uid="uid://bnre22mn4ie1b" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/12.png" id="20_551f8"]
+[ext_resource type="Texture2D" uid="uid://c1n3eb8ji8dp6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/5.png" id="21_fog72"]
+[ext_resource type="Texture2D" uid="uid://dl33rjh6xl3w5" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/22.png" id="22_v4hpl"]
+[ext_resource type="Texture2D" uid="uid://do1awguqwn32t" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/19.png" id="23_wnv74"]
+[ext_resource type="Texture2D" uid="uid://d30eqvcxh83ii" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/8.png" id="24_lqu7h"]
+[ext_resource type="Texture2D" uid="uid://clx4b5f0weiqb" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/2.png" id="25_t3oxq"]
+[ext_resource type="Texture2D" uid="uid://sh0sfqb1y6al" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/15.png" id="26_7ngqc"]
+[ext_resource type="Texture2D" uid="uid://cy7y1u7pu8pew" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/5.png" id="27_428ds"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6did1"]
+texture = ExtResource("1_vfmla")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uwchu"]
+texture = ExtResource("2_g70cy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8xjj"]
+texture = ExtResource("1_vfmla")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbk6m"]
+texture = ExtResource("2_g70cy")
 
 [node name="Levels" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_7472o")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1021.0
+offset_bottom = 647.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+texture_filter = 1
+offset_left = 20.0
+offset_top = 74.0
+offset_right = 1002.0
+offset_bottom = 574.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Levels" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = -30
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/Levels"]
+custom_minimum_size = Vector2(650, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_6did1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Levels/Panel"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 90.0
+offset_right = 358.0
+offset_bottom = 401.0
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Level1" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer/Level1"]
+position = Vector2(51, 42)
+scale = Vector2(6, 6)
+texture = ExtResource("3_50fiq")
+
+[node name="Level2" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer/Level2"]
+position = Vector2(51, 44)
+scale = Vector2(6, 6)
+texture = ExtResource("4_csdp0")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Level3" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2/Level3"]
+position = Vector2(51, 44)
+scale = Vector2(6, 6)
+texture = ExtResource("5_hj38q")
+
+[node name="Level4" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2/Level4"]
+position = Vector2(51, 44)
+scale = Vector2(6, 6)
+texture = ExtResource("6_ejmw3")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Level5" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3/Level5"]
+position = Vector2(51, 44)
+scale = Vector2(6, 6)
+texture = ExtResource("7_gef0h")
+
+[node name="Level6" type="Button" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3/Level6"]
+position = Vector2(51, 44)
+scale = Vector2(6, 6)
+texture = ExtResource("8_buuar")
+
+[node name="Boss" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 75
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/Boss"]
+custom_minimum_size = Vector2(200, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8xjj")
+
+[node name="10" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel"]
+position = Vector2(241, 289.4)
+scale = Vector2(7, 7)
+texture = ExtResource("9_f0xdc")
+
+[node name="8" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/10"]
+position = Vector2(0, -32)
+texture = ExtResource("10_m57f7")
+
+[node name="12" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/10"]
+position = Vector2(0, 32)
+texture = ExtResource("11_ipj1o")
+
+[node name="21" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel"]
+position = Vector2(26, 279.4)
+scale = Vector2(7, 8.4)
+texture = ExtResource("12_15b15")
+
+[node name="23" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/21"]
+position = Vector2(0, 24)
+texture = ExtResource("13_gejsi")
+
+[node name="19" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/21"]
+position = Vector2(0, -31.875)
+texture = ExtResource("14_hl053")
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel"]
+position = Vector2(-198, 266.4)
+scale = Vector2(7.9, 7.9)
+texture = ExtResource("15_cp7vk")
+
+[node name="25" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/27"]
+position = Vector2(0, -26.7143)
+texture = ExtResource("16_0icbo")
+
+[node name="29" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/27"]
+position = Vector2(0, 31.8571)
+texture = ExtResource("17_vi30n")
+
+[node name="Boss" type="MarginContainer" parent="MarginContainer/HBoxContainer/Boss/Panel"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_left = 64.0
+offset_top = 41.0
+offset_right = 139.0
+offset_bottom = 116.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Boss/Panel/Boss"]
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwchu")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="MarginContainer/HBoxContainer/Boss/Panel/Boss/Button"]
+position = Vector2(37, 31)
+scale = Vector2(5, 5)
+texture = ExtResource("18_yoow4")
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 64.0
+offset_top = 61.0
+offset_right = 164.0
+offset_bottom = 161.0
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lbk6m")
+icon = ExtResource("2_g70cy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="27" type="Sprite2D" parent="Back"]
+position = Vector2(51, 42)
+scale = Vector2(6, 6)
+texture = ExtResource("19_orsb1")
+
+[node name="LevelsText" type="Sprite2D" parent="."]
+position = Vector2(475, 229)
+scale = Vector2(7, 7)
+texture = ExtResource("20_551f8")
+
+[node name="12" type="Sprite2D" parent="LevelsText"]
+position = Vector2(5.5, 0)
+texture = ExtResource("21_fog72")
+
+[node name="14" type="Sprite2D" parent="LevelsText"]
+position = Vector2(17.5, 0)
+texture = ExtResource("21_fog72")
+
+[node name="13" type="Sprite2D" parent="LevelsText"]
+position = Vector2(11.375, 0)
+texture = ExtResource("22_v4hpl")
+
+[node name="15" type="Sprite2D" parent="LevelsText"]
+position = Vector2(23, 0)
+texture = ExtResource("20_551f8")
+
+[node name="16" type="Sprite2D" parent="LevelsText"]
+position = Vector2(28.625, 0)
+texture = ExtResource("23_wnv74")
+
+[node name="17" type="Sprite2D" parent="LevelsText"]
+position = Vector2(14, 8.28571)
+texture = ExtResource("24_lqu7h")
+
+[node name="BossText" type="Sprite2D" parent="."]
+position = Vector2(739, 275)
+scale = Vector2(7, 7)
+texture = ExtResource("25_t3oxq")
+
+[node name="3" type="Sprite2D" parent="BossText"]
+position = Vector2(5.57143, 0)
+texture = ExtResource("26_7ngqc")
+
+[node name="4" type="Sprite2D" parent="BossText"]
+position = Vector2(11.5714, 0)
+texture = ExtResource("23_wnv74")
+
+[node name="5" type="Sprite2D" parent="BossText"]
+position = Vector2(17.5714, 0)
+texture = ExtResource("23_wnv74")
+
+[node name="6" type="Sprite2D" parent="BossText"]
+position = Vector2(9.42857, 8.42857)
+texture = ExtResource("27_428ds")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer/Level1" to="." method="level_1"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer/Level2" to="." method="level_2"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2/Level3" to="." method="level_3"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer2/Level4" to="." method="level_4"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3/Level5" to="." method="level_5"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Levels/Panel/VBoxContainer/HBoxContainer3/Level6" to="." method="level_6"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Boss/Panel/Boss/Button" to="." method="level_boss"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

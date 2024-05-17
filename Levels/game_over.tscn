@@ -36,7 +36,6 @@ texture = ExtResource("6_qww0o")
 script = ExtResource("1_g2tai")
 
 [node name="Menu" type="Panel" parent="."]
-visible = false
 offset_right = 1020.0
 offset_bottom = 652.0
 

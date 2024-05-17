@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca54u33gba1tj"]
+
+[ext_resource type="Texture2D" uid="uid://bffp5ouy1x7ad" path="res://Image/asset1/Wood and Paper UI/Life Bars/Big Bars/1.png" id="1_52q0m"]
+[ext_resource type="Script" path="res://Elements/LifeBar/life_bar.gd" id="1_xn78d"]
+[ext_resource type="Texture2D" uid="uid://cuu0v4r5sjoxq" path="res://Image/asset1/Wood and Paper UI/Life Bars/Big Bars/3.png" id="2_61467"]
+[ext_resource type="Texture2D" uid="uid://cc3qlw448vkct" path="res://Image/asset1/Wood and Paper UI/Life Bars/Big Bars/4.png" id="3_yappp"]
+[ext_resource type="Texture2D" uid="uid://dg1sbd351ct5r" path="res://Image/asset1/Wood and Paper UI/Life Bars/Colors/1.png" id="4_uuyv2"]
+
+[node name="LifeBar" type="Control" node_paths=PackedStringArray("kirmiziCizgi")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xn78d")
+kirmiziCizgi = NodePath("Node2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60, 46)
+scale = Vector2(2, 2)
+texture = ExtResource("1_52q0m")
+
+[node name="3" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(31, 0)
+texture = ExtResource("2_61467")
+
+[node name="4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(63, 0)
+texture = ExtResource("2_61467")
+
+[node name="5" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(95, 0)
+texture = ExtResource("3_yappp")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(62, 44)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D"]
+position = Vector2(106.125, 0)
+scale = Vector2(6.645, 2)
+texture = ExtResource("4_uuyv2")

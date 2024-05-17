@@ -36,6 +36,7 @@ process_mode = 3
 script = ExtResource("1_3rcwf")
 
 [node name="Menu" type="Panel" parent="."]
+visible = false
 offset_right = 1020.0
 offset_bottom = 652.0
 

@@ -1,3 +1,146 @@
-[gd_scene format=3 uid="uid://cyxggp2y52tq4"]
+[gd_scene load_steps=18 format=3 uid="uid://cyxggp2y52tq4"]
+
+[ext_resource type="Texture2D" uid="uid://bfrt4mxw3u3ju" path="res://Image/asset1/Wood and Paper UI/Prefabs/6.png" id="1_bkmpm"]
+[ext_resource type="Script" path="res://Levels/Score/score.gd" id="1_ndbv2"]
+[ext_resource type="Texture2D" uid="uid://cdrkdgl5y6uur" path="res://Image/asset1/Wood and Paper UI/Prefabs/12.png" id="2_ynkka"]
+[ext_resource type="Texture2D" uid="uid://16cm0w8s1qxo" path="res://Image/asset1/Wood and Paper UI/Yellow Button/1.png" id="3_70ndn"]
+[ext_resource type="Texture2D" uid="uid://urxnxbnq6brb" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Icons/1.png" id="4_o0327"]
+[ext_resource type="Texture2D" uid="uid://do1awguqwn32t" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/19.png" id="6_b7pbr"]
+[ext_resource type="Texture2D" uid="uid://dkfimnj76gt1j" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/3.png" id="7_v4j8r"]
+[ext_resource type="Texture2D" uid="uid://sh0sfqb1y6al" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/15.png" id="8_76sxs"]
+[ext_resource type="Texture2D" uid="uid://cmdwgowda5c8w" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/18.png" id="9_8g6pv"]
+[ext_resource type="Texture2D" uid="uid://c1n3eb8ji8dp6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/5.png" id="10_wc3ud"]
+[ext_resource type="Texture2D" uid="uid://0u6mlkq8p6rm" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/50.png" id="11_hdl7d"]
+[ext_resource type="Texture2D" uid="uid://bnre22mn4ie1b" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/12.png" id="12_k5bvb"]
+[ext_resource type="Texture2D" uid="uid://cm2ocpl3sjalt" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/1.png" id="13_bqs1t"]
+[ext_resource type="Texture2D" uid="uid://chfij0i60c5vr" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/20.png" id="14_qcu8g"]
+[ext_resource type="LabelSettings" uid="uid://cbnk05d71x21s" path="res://Font/new_label_settings.tres" id="15_lhrf2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_naqs6"]
+texture = ExtResource("1_bkmpm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ubyxf"]
+texture = ExtResource("3_70ndn")
 
 [node name="Score" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ndbv2")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1023.0
+offset_bottom = 646.0
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(500, 500)
+offset_left = 121.0
+offset_top = 51.0
+offset_right = 871.0
+offset_bottom = 551.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_naqs6")
+
+[node name="12" type="Sprite2D" parent="Panel2"]
+position = Vector2(370.5, 252)
+scale = Vector2(5.72656, 4)
+texture = ExtResource("2_ynkka")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 117.0
+offset_top = 42.0
+offset_right = 217.0
+offset_bottom = 142.0
+theme_override_colors/icon_hover_color = Color(0.831373, 0.831373, 0.831373, 1)
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ubyxf")
+icon = ExtResource("3_70ndn")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="1" type="Sprite2D" parent="Button"]
+position = Vector2(51, 43)
+scale = Vector2(7, 7)
+texture = ExtResource("4_o0327")
+
+[node name="19" type="Sprite2D" parent="."]
+position = Vector2(263, 245)
+scale = Vector2(8, 8)
+texture = ExtResource("6_b7pbr")
+
+[node name="20" type="Sprite2D" parent="19"]
+position = Vector2(6.375, 0)
+texture = ExtResource("7_v4j8r")
+
+[node name="21" type="Sprite2D" parent="19"]
+position = Vector2(13, 0)
+texture = ExtResource("8_76sxs")
+
+[node name="22" type="Sprite2D" parent="19"]
+position = Vector2(19.75, 0)
+texture = ExtResource("9_8g6pv")
+
+[node name="23" type="Sprite2D" parent="19"]
+position = Vector2(26.625, 0)
+texture = ExtResource("10_wc3ud")
+
+[node name="24" type="Sprite2D" parent="19"]
+position = Vector2(33.25, 0.375)
+texture = ExtResource("11_hdl7d")
+
+[node name="20" type="Sprite2D" parent="."]
+position = Vector2(401, 337)
+scale = Vector2(6, 6)
+texture = ExtResource("6_b7pbr")
+
+[node name="20" type="Sprite2D" parent="20"]
+position = Vector2(6.375, 0)
+texture = ExtResource("7_v4j8r")
+
+[node name="21" type="Sprite2D" parent="20"]
+position = Vector2(13, 0)
+texture = ExtResource("8_76sxs")
+
+[node name="22" type="Sprite2D" parent="20"]
+position = Vector2(19.75, 0)
+texture = ExtResource("9_8g6pv")
+
+[node name="23" type="Sprite2D" parent="20"]
+position = Vector2(26.625, 0)
+texture = ExtResource("10_wc3ud")
+
+[node name="24" type="Sprite2D" parent="20"]
+position = Vector2(33.25, 0.375)
+texture = ExtResource("11_hdl7d")
+
+[node name="25" type="Sprite2D" parent="20"]
+position = Vector2(-24.5714, 0.142857)
+texture = ExtResource("12_k5bvb")
+
+[node name="26" type="Sprite2D" parent="20/25"]
+position = Vector2(6, 0)
+texture = ExtResource("13_bqs1t")
+
+[node name="27" type="Sprite2D" parent="20/25"]
+position = Vector2(12, 0)
+texture = ExtResource("6_b7pbr")
+
+[node name="28" type="Sprite2D" parent="20/25"]
+position = Vector2(17.5714, 0)
+texture = ExtResource("14_qcu8g")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 426.0
+offset_top = 211.0
+offset_right = 618.0
+offset_bottom = 291.0
+text = "9999"
+label_settings = ExtResource("15_lhrf2")
+
+[node name="Last score" type="Label" parent="."]
+offset_left = 473.0
+offset_top = 301.0
+offset_right = 665.0
+offset_bottom = 381.0
+text = "9999"
+label_settings = ExtResource("15_lhrf2")
+
+[connection signal="pressed" from="Button" to="." method="backMenu"]

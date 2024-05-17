@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://b1h0wdf6lx6r5"]
+[gd_scene load_steps=108 format=3 uid="uid://b1h0wdf6lx6r5"]
 
 [ext_resource type="Texture2D" uid="uid://dmjxleqa4iet3" path="res://Image/asset1/Palm Tree Island/Terrain/Terrain (32x32).png" id="2_nrvta"]
 [ext_resource type="Texture2D" uid="uid://cgj30e008slfk" path="res://Image/kings production (22).jpg" id="2_rjt2e"]
@@ -69,6 +69,7 @@
 [ext_resource type="PackedScene" uid="uid://b54qwkjg3j5bx" path="res://Levels/GameUI/game_ui.tscn" id="42_qthqb"]
 [ext_resource type="PackedScene" uid="uid://cc4ii82jxh2aj" path="res://Elements/lose_level.tscn" id="43_tak76"]
 [ext_resource type="PackedScene" uid="uid://carimt6ucaa6a" path="res://Levels/game_over.tscn" id="44_n4u4a"]
+[ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="70_x32xa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy1k7"]
 texture = ExtResource("3_1cw11")
@@ -1433,12 +1434,12 @@ position = Vector2(4177.27, 1627.44)
 shape = SubResource("SegmentShape2D_4a4bp")
 
 [node name="Player" parent="." instance=ExtResource("3_ah34c")]
-position = Vector2(11659.5, 2747.76)
+position = Vector2(86, -24)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0.510681, 0.162659)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(1.5, 1.5)
 limit_left = -900
 limit_bottom = 16600
 position_smoothing_enabled = true
@@ -1909,7 +1910,7 @@ position = Vector2(467, 387)
 scale = Vector2(2.5, 2.5)
 
 [node name="Explorer" parent="Enimy/FullExplorer" index="0"]
-sceneStr = "res://Levels/level_1.tscn"
+sceneStr = "res://Levels/MainMenu/main_menu.tscn"
 
 [node name="Right" parent="Enimy/FullExplorer/Wall" index="1"]
 position = Vector2(131.6, -32.4)
@@ -2004,7 +2005,6 @@ position = Vector2(0, -15.625)
 
 [node name="CollisionShape2D" parent="Enimy/Totems3/Area2D" index="0"]
 position = Vector2(-162.375, 14)
-scale = Vector2(1, 1)
 
 [node name="Marker2D" parent="Enimy/Totems3" index="7"]
 position = Vector2(-12, -3.12503)
@@ -2018,7 +2018,6 @@ root_node = NodePath("../../Totems4")
 
 [node name="CollisionShape2D" parent="Enimy/Totems4/Area2D" index="0"]
 position = Vector2(-162.5, 13.9999)
-scale = Vector2(1, 1)
 
 [node name="PlayerFriend" parent="." instance=ExtResource("35_h5x1o")]
 position = Vector2(-60, -33)
@@ -2047,12 +2046,19 @@ layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(38338547, 0, 0, 37355506, 0, 268435456, 38273031, 0, 268435456, 38338604, 0, 0)
 
 [node name="PauseMenu" parent="." instance=ExtResource("32_qs0eb")]
-visible = false
+
+[node name="LifeBar" parent="PauseMenu" instance=ExtResource("70_x32xa")]
+offset_left = -12.0
+offset_top = -19.0
+offset_right = -12.0
+offset_bottom = -19.0
+toplamYasam = 10.0
 
 [node name="GameUI" parent="." instance=ExtResource("42_qthqb")]
 
 [node name="GameOver" parent="." instance=ExtResource("44_n4u4a")]
 process_mode = 3
+visible = false
 
 [connection signal="body_entered" from="Paths/Path2D6/Button/Area2D" to="Paths/Path2D6/MovingBlockWithButton/StaticBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Paths/Path2D9/MovingBlockWithButton/AnimatedSprite2D/Area2D" to="Paths/Path2D9/MovingBlockWithButton/StaticBody2D" method="_on_area_2d_body_entered"]
@@ -2067,4 +2073,5 @@ process_mode = 3
 [editable path="Enimy/Totems2"]
 [editable path="Enimy/Totems3"]
 [editable path="Enimy/Totems4"]
+[editable path="PauseMenu"]
 [editable path="GameOver"]

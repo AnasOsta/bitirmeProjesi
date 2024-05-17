@@ -92,25 +92,25 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/margin_left = 75
 
-[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/MarginContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(650, 500)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_6jbuw")
 
-[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 2
 offset_left = -4.0
 offset_top = 26.0
@@ -118,47 +118,47 @@ offset_right = 659.0
 offset_bottom = 321.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_1l3w2")
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(135, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("3_svwu6")
 
-[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(188, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("4_7lt1k")
 
-[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(241, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("5_2gdqo")
 
-[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(295, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("6_b1dte")
 
-[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(363, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("3_svwu6")
 
-[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(415, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("7_71tr0")
 
-[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(467, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("6_b1dte")
 
-[node name="Sprite2D8" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Panel"]
+[node name="Sprite2D8" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Panel"]
 position = Vector2(519, 152.5)
 scale = Vector2(5, 5)
 texture = ExtResource("8_i6l2g")
 
-[node name="Sittings" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Sittings" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 105.0
 offset_top = 278.0
@@ -171,12 +171,12 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Sittings"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Sittings"]
 position = Vector2(46, 39)
 scale = Vector2(6, 6)
 texture = ExtResource("10_fm31a")
 
-[node name="Levels" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Levels" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 105.0
 offset_top = 359.0
@@ -189,12 +189,12 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Levels"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Levels"]
 position = Vector2(45, 38)
 scale = Vector2(6, 6)
 texture = ExtResource("10_2b64b")
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 265.0
 offset_top = 288.0
@@ -207,27 +207,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Play"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Play"]
 position = Vector2(43, 62)
 scale = Vector2(4, 4)
 texture = ExtResource("12_x70mg")
 
-[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Play"]
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Play"]
 position = Vector2(65, 62)
 scale = Vector2(4, 4)
 texture = ExtResource("15_bg2ku")
 
-[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Play"]
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Play"]
 position = Vector2(88, 62)
 scale = Vector2(4, 4)
 texture = ExtResource("13_wjaax")
 
-[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Play"]
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Play"]
 position = Vector2(110, 62)
 scale = Vector2(4, 4)
 texture = ExtResource("15_iik4n")
 
-[node name="Score" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Score" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 463.0
 offset_top = 278.0
@@ -240,38 +240,38 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Score"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Score"]
 position = Vector2(47, 38)
 scale = Vector2(6, 6)
 texture = ExtResource("16_p4w0g")
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 position = Vector2(665, 406)
 scale = Vector2(6, 6)
 texture = ExtResource("18_om7gu")
 
-[node name="Info1" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Info1" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 position = Vector2(474, 406)
 scale = Vector2(6, 6)
 texture = ExtResource("17_v63yd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Info1"]
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Info1"]
 position = Vector2(6.33334, -1.16667)
 texture = ExtResource("19_51bj4")
 
-[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Info1"]
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Info1"]
 position = Vector2(11.8333, -1.16667)
 texture = ExtResource("20_81wkg")
 
-[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Info1"]
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Info1"]
 position = Vector2(17.5, -1.16667)
 texture = ExtResource("21_x7jce")
 
-[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Info1"]
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Info1"]
 position = Vector2(23, -1.16667)
 texture = ExtResource("22_up3rh")
 
-[node name="Info" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Info" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 475.0
 offset_top = 371.0
@@ -280,28 +280,28 @@ offset_bottom = 429.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_7qcpl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2q01b")
 
-[node name="Exit1" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Exit1" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 position = Vector2(857, 436)
 scale = Vector2(6, 6)
 texture = ExtResource("23_7thts")
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Exit1"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Exit1"]
 position = Vector2(-27, -1.33334)
 texture = ExtResource("24_m35ch")
 
-[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Exit1"]
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Exit1"]
 position = Vector2(-21, -1.33334)
 texture = ExtResource("25_vdbly")
 
-[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Exit1"]
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Exit1"]
 position = Vector2(-15, -1.33334)
 texture = ExtResource("19_51bj4")
 
-[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/Panel/Exit1"]
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer/Panel/Exit1"]
 position = Vector2(-9, -1.33334)
 texture = ExtResource("26_ynxks")
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/Panel"]
+[node name="Exit" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/Panel"]
 layout_mode = 0
 offset_left = 659.0
 offset_top = 400.0
@@ -310,17 +310,17 @@ offset_bottom = 460.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gqxdf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2rdtj")
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(200, 300)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_kf3n2")
 
-[node name="Store" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer2/Panel"]
+[node name="Store" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/Panel"]
 layout_mode = 0
 offset_left = 57.0
 offset_top = 145.0
@@ -333,22 +333,22 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/Panel/Store"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer2/Panel/Store"]
 position = Vector2(47, 38)
 scale = Vector2(6, 6)
 texture = ExtResource("18_4s1jg")
 
-[node name="Cridet1" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/Panel"]
+[node name="Cridet1" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer2/Panel"]
 position = Vector2(100, 106)
 scale = Vector2(5.375, 5.375)
 texture = ExtResource("19_y3pyr")
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer2/Panel/Cridet1"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer2/Panel/Cridet1"]
 position = Vector2(-0.372086, -0.372093)
 scale = Vector2(0.930233, 0.930233)
 texture = ExtResource("20_p3735")
 
-[node name="Cridet" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer2/Panel"]
+[node name="Cridet" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/Panel"]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 74.0
@@ -357,11 +357,11 @@ offset_bottom = 138.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8o3kw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j1ge6")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Sittings" to="." method="_on_sittings_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Score" to="." method="_on_score_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Info" to="." method="_on_info_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Panel/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/Panel/Store" to="." method="_on_store_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/Panel/Cridet" to="." method="_on_cridet_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Sittings" to="." method="_on_sittings_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/Panel/Store" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/Panel/Cridet" to="." method="_on_cridet_pressed"]

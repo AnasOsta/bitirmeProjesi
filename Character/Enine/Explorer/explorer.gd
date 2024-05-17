@@ -62,7 +62,8 @@ func _on_entred_area(body):
 
 @warning_ignore("unused_parameter")
 func _on_dead_player_body_entered(body):
-	TransBlack.change_scene_string(sceneStr)
+	$"../../../GameOver".visible = true
+	#TransBlack.change_scene_string(sceneStr)
 
 
 func _player_finded(body):
