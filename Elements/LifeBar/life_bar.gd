@@ -4,13 +4,17 @@ extends Control
 var kalanYasam : float
 var olcek : float
 @export var kirmiziCizgi : Node2D
+@export var damageasble : Damageable
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	damageasble.connect("onHit", onDamageableHit)
+	toplamYasam = damageasble.health
 	kalanYasam = toplamYasam
 
-func YasamAzalt (azaltmaMiktari : float = 1):
-	kalanYasam -= azaltmaMiktari
+@warning_ignore("unused_parameter")
+func onDamageableHit (node : Node, damageAmount : int, knockBack_direction : Vector2):
+	kalanYasam -= damageAmount
 	if (kalanYasam < 0):
 		kalanYasam = 0
 	olcek = kalanYasam / toplamYasam

@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://ci6ccgmbn1d7x"]
+[gd_scene load_steps=107 format=3 uid="uid://ci6ccgmbn1d7x"]
 
 [ext_resource type="Script" path="res://Character/Player/player.gd" id="1_i5fdq"]
 [ext_resource type="Texture2D" uid="uid://cvb57tab4hwbo" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="2_fey6d"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://7sbp1cjvg7p4" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 01.png" id="48_35xki"]
 [ext_resource type="Texture2D" uid="uid://bwpo5ls1nl7yx" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 02.png" id="49_8mhrg"]
 [ext_resource type="Texture2D" uid="uid://df3pmqnbawvjg" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 03.png" id="50_ehkw2"]
+[ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="57_80fw3"]
 [ext_resource type="Script" path="res://StateMachine/Sword.gd" id="65_un7pu"]
 [ext_resource type="Script" path="res://StateMachine/FacingCollisionShape2D.gd" id="66_ykc86"]
 
@@ -493,8 +494,11 @@ graph_offset = Vector2(-207.618, 43.4412)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uci75"]
 size = Vector2(20, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fitu0"]
+size = Vector2(18, 23)
+
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 10
+collision_mask = 74
 script = ExtResource("1_i5fdq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -550,6 +554,11 @@ deadState = NodePath("../Dead")
 returnState = NodePath("../Ground")
 deadAnimatoinNode = "dead"
 hitAnimationString = "dead_hit"
+knockBack_speed = 200.0
+can_move = false
+can_jump = false
+can_attack = false
+can_double_jump = false
 
 [node name="Timer" type="Timer" parent="CharecterStateMachine/Hit"]
 wait_time = 0.25
@@ -584,7 +593,7 @@ parameters/move/blend_position = 0.0
 
 [node name="Sword" type="Area2D" parent="." node_paths=PackedStringArray("player", "facingCollisionShape2D")]
 collision_layer = 0
-collision_mask = 8
+collision_mask = 40
 script = ExtResource("65_un7pu")
 player = NodePath("..")
 facingCollisionShape2D = NodePath("CollisionShape2D")
@@ -598,8 +607,23 @@ script = ExtResource("66_ykc86")
 facingLeftPotion = Vector2(-20, 0)
 facingRightPotion = Vector2(20, 0)
 
+[node name="HitBoxButtom" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxButtom"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_fitu0")
+debug_color = Color(0.968627, 0, 0.470588, 0.419608)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeBar" parent="CanvasLayer" node_paths=PackedStringArray("damageasble") instance=ExtResource("57_80fw3")]
+damageasble = NodePath("../../Damageable")
+
 [connection signal="timeout" from="CharecterStateMachine/Hit/Timer" to="CharecterStateMachine/Hit" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharecterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharecterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
 [connection signal="body_entered" from="Sword" to="Sword" method="_on_body_entered"]
+[connection signal="body_entered" from="HitBoxButtom" to="Sword" method="_on_hit_box_buttom_body_entered"]

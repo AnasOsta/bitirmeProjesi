@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4vke3eim083e"]
+
+[ext_resource type="Script" path="res://Elements/Chest/Chest.gd" id="1_uv66l"]
+[ext_resource type="Texture2D" uid="uid://dtengoufxnsx3" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 01.png" id="1_vtevq"]
+[ext_resource type="Texture2D" uid="uid://c1f8dnuov48k5" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 02.png" id="2_pl1ng"]
+[ext_resource type="Texture2D" uid="uid://b1smmwjs4nsej" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 03.png" id="3_fy6ep"]
+[ext_resource type="Texture2D" uid="uid://xd2egw7c2ja4" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 04.png" id="4_s61gs"]
+[ext_resource type="Texture2D" uid="uid://iy0yee5s8sjq" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 05.png" id="5_0u74m"]
+[ext_resource type="Texture2D" uid="uid://cye178kev7e30" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Open 06.png" id="6_3lik2"]
+[ext_resource type="Texture2D" uid="uid://bejak7tsnhit1" path="res://Image/asset1/Palm Tree Island/Objects/Chest/Chest Close 01.png" id="7_m047q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0uxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vtevq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pl1ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fy6ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s61gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0u74m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3lik2")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_m047q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r1bw"]
+size = Vector2(24, 20)
+
+[node name="Chest" type="StaticBody2D" groups=["Chest"]]
+z_index = -1
+collision_layer = 34
+collision_mask = 0
+script = ExtResource("1_uv66l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h0uxw")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_7r1bw")

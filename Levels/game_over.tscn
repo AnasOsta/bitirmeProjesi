@@ -33,6 +33,8 @@ texture = ExtResource("6_qww0o")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2k7a"]
 
 [node name="GameOver" type="CanvasLayer"]
+process_mode = 3
+visible = false
 script = ExtResource("1_g2tai")
 
 [node name="Menu" type="Panel" parent="."]

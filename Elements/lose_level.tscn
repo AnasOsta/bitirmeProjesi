@@ -7,12 +7,15 @@ a = Vector2(-41460.3, 2835.83)
 b = Vector2(30219.7, 2835.83)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5pdyn"]
+a = Vector2(-45, 10)
 
 [node name="LoseLevel" type="StaticBody2D"]
 collision_layer = 8
 script = ExtResource("1_qv5q3")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 65
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(10772.3, 4332.17)

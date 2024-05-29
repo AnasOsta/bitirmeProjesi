@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://yqjlevi1rb4k"]
+[gd_scene load_steps=71 format=3 uid="uid://yqjlevi1rb4k"]
 
 [ext_resource type="Script" path="res://Character/Player/player.gd" id="1_d7rd2"]
 [ext_resource type="Texture2D" uid="uid://cvb57tab4hwbo" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="2_bhtk0"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://76fan4l3fpd8" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 04.png" id="30_p411k"]
 [ext_resource type="Script" path="res://StateMachine/State.gd" id="36_y5oy4"]
 [ext_resource type="Script" path="res://StateMachine/HitState.gd" id="37_o0pvc"]
+[ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="38_jnd4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjk7l"]
 size = Vector2(14, 20)
@@ -340,6 +341,10 @@ one_shot = true
 
 [node name="Dead" type="Node" parent="CharecterStateMachine"]
 script = ExtResource("36_y5oy4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeBar" parent="CanvasLayer" instance=ExtResource("38_jnd4u")]
 
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharecterStateMachine/Landing" method="_on_animation_tree_animation_finished"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://b1h0wdf6lx6r5"]
+[gd_scene load_steps=107 format=3 uid="uid://b1h0wdf6lx6r5"]
 
 [ext_resource type="Texture2D" uid="uid://dmjxleqa4iet3" path="res://Image/asset1/Palm Tree Island/Terrain/Terrain (32x32).png" id="2_nrvta"]
 [ext_resource type="Texture2D" uid="uid://cgj30e008slfk" path="res://Image/kings production (22).jpg" id="2_rjt2e"]
@@ -69,7 +69,6 @@
 [ext_resource type="PackedScene" uid="uid://b54qwkjg3j5bx" path="res://Levels/GameUI/game_ui.tscn" id="42_qthqb"]
 [ext_resource type="PackedScene" uid="uid://cc4ii82jxh2aj" path="res://Elements/lose_level.tscn" id="43_tak76"]
 [ext_resource type="PackedScene" uid="uid://carimt6ucaa6a" path="res://Levels/game_over.tscn" id="44_n4u4a"]
-[ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="70_x32xa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy1k7"]
 texture = ExtResource("3_1cw11")
@@ -1067,6 +1066,7 @@ sources/0 = SubResource("TileSetAtlasSource_0pdm7")
 [node name="Level1" type="Node2D"]
 texture_filter = 1
 position = Vector2(-30, 0)
+metadata/_edit_vertical_guides_ = [16654.0]
 
 [node name="TileMap2" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -1315,126 +1315,127 @@ frame_progress = 0.250684
 position = Vector2(-571.704, 1185)
 shape = SubResource("RectangleShape2D_kombp")
 
-[node name="Node" type="Node" parent="."]
+[node name="Waters" type="Node" parent="."]
 
-[node name="WaterTop" type="AnimatedSprite2D" parent="Node"]
+[node name="WaterTop" type="AnimatedSprite2D" parent="Waters"]
 position = Vector2(-462, 1211)
 sprite_frames = SubResource("SpriteFrames_58ywf")
 frame = 1
 speed_scale = 0.75
 
-[node name="WaterTop2" type="AnimatedSprite2D" parent="Node"]
+[node name="WaterTop2" type="AnimatedSprite2D" parent="Waters"]
 position = Vector2(-558, 1211)
 sprite_frames = SubResource("SpriteFrames_58ywf")
 frame = 1
 speed_scale = 0.75
 
-[node name="WaterTop3" type="AnimatedSprite2D" parent="Node"]
+[node name="WaterTop3" type="AnimatedSprite2D" parent="Waters"]
 position = Vector2(-654, 1211)
 sprite_frames = SubResource("SpriteFrames_58ywf")
 frame = 2
 speed_scale = 0.75
 
-[node name="WaterTop4" type="AnimatedSprite2D" parent="Node"]
+[node name="WaterTop4" type="AnimatedSprite2D" parent="Waters"]
 position = Vector2(-750, 1211)
 sprite_frames = SubResource("SpriteFrames_58ywf")
 speed_scale = 0.75
 
-[node name="1" type="Sprite2D" parent="Node"]
+[node name="1" type="Sprite2D" parent="Waters"]
 texture_filter = 1
 position = Vector2(-191, 1365)
 scale = Vector2(4.64583, 10.6563)
 texture = ExtResource("29_urko2")
 
-[node name="2" type="Sprite2D" parent="Node"]
+[node name="2" type="Sprite2D" parent="Waters"]
 texture_filter = 1
 position = Vector2(-1123, 1397.5)
 scale = Vector2(14.7708, 10.6563)
 texture = ExtResource("29_urko2")
 
-[node name="3" type="Sprite2D" parent="Node"]
+[node name="3" type="Sprite2D" parent="Waters"]
 texture_filter = 1
 position = Vector2(6282.5, 2018.5)
 scale = Vector2(64.7396, 28.9688)
 texture = ExtResource("29_urko2")
 
-[node name="4" type="Sprite2D" parent="Node"]
+[node name="4" type="Sprite2D" parent="Waters"]
 texture_filter = 1
 position = Vector2(-1134.5, 1211.25)
 scale = Vector2(7.01042, 1.01565)
 texture = ExtResource("29_urko2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Waters"]
 libraries = {
 "": SubResource("AnimationLibrary_iyjyl")
 }
 autoplay = "defualt"
 speed_scale = 0.4
 
-[node name="Node2" type="Node" parent="."]
+[node name="Traps" type="Node" parent="."]
 
-[node name="StaticBody2D" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(3763, 831)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D2" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D2" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(3822, 831)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D3" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D3" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(3880, 831)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D4" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D4" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(3704, 831)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D5" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D5" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(12697, 1123)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D6" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D6" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(12759, 1123)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D7" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D7" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(12820, 1123)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D8" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D8" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(12882, 1123)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="StaticBody2D9" parent="Node2" instance=ExtResource("30_c80pj")]
+[node name="StaticBody2D9" parent="Traps" instance=ExtResource("30_c80pj")]
 position = Vector2(12882, 1123)
 scale = Vector2(2, 2)
 sceneStr = "res://Levels/level_1.tscn"
 
-[node name="Area2D" parent="Node2" instance=ExtResource("43_tak76")]
+[node name="Area2D" parent="Traps" node_paths=PackedStringArray("gameOver") instance=ExtResource("43_tak76")]
 position = Vector2(-30, 0)
 sceneStr = "res://Levels/level_1.tscn"
+gameOver = NodePath("../../GameOver")
 
-[node name="CollisionShape2D" parent="Node2/Area2D/Area2D" index="0"]
+[node name="CollisionShape2D" parent="Traps/Area2D/Area2D" index="0"]
 position = Vector2(10544, 68)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2/Area2D/Area2D" index="1"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Traps/Area2D/Area2D" index="1"]
 position = Vector2(-558.174, 1264)
 shape = SubResource("SegmentShape2D_1jyqp")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2/Area2D/Area2D" index="2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Traps/Area2D/Area2D" index="2"]
 position = Vector2(4177.27, 1627.44)
 shape = SubResource("SegmentShape2D_4a4bp")
 
 [node name="Player" parent="." instance=ExtResource("3_ah34c")]
-position = Vector2(86, -24)
+position = Vector2(91, -48.5)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -1445,6 +1446,7 @@ limit_bottom = 16600
 position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(11.5, 0)
 scale = Vector2(0.15, 0.15)
 color = Color(1, 1, 1, 0.6)
 texture = ExtResource("2_rjt2e")
@@ -2047,18 +2049,9 @@ layer_0/tile_data = PackedInt32Array(38338547, 0, 0, 37355506, 0, 268435456, 382
 
 [node name="PauseMenu" parent="." instance=ExtResource("32_qs0eb")]
 
-[node name="LifeBar" parent="PauseMenu" instance=ExtResource("70_x32xa")]
-offset_left = -12.0
-offset_top = -19.0
-offset_right = -12.0
-offset_bottom = -19.0
-toplamYasam = 10.0
+[node name="GameOver" parent="." instance=ExtResource("44_n4u4a")]
 
 [node name="GameUI" parent="." instance=ExtResource("42_qthqb")]
-
-[node name="GameOver" parent="." instance=ExtResource("44_n4u4a")]
-process_mode = 3
-visible = false
 
 [connection signal="body_entered" from="Paths/Path2D6/Button/Area2D" to="Paths/Path2D6/MovingBlockWithButton/StaticBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Paths/Path2D9/MovingBlockWithButton/AnimatedSprite2D/Area2D" to="Paths/Path2D9/MovingBlockWithButton/StaticBody2D" method="_on_area_2d_body_entered"]
@@ -2066,7 +2059,7 @@ visible = false
 [editable path="Paths/Path2D6/MovingBlockWithButton"]
 [editable path="Paths/Path2D9/MovingBlockWithButton"]
 [editable path="Doors/Door"]
-[editable path="Node2/Area2D"]
+[editable path="Traps/Area2D"]
 [editable path="Enimy/FullExplorer"]
 [editable path="Enimy/FullExplorer2"]
 [editable path="Enimy/FullExplorer3"]

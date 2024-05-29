@@ -8,7 +8,7 @@ func level_1():
 
 
 func level_2():
-	pass # Replace with function body.
+	LoadingManager.load_scene("res://Levels/level_2.tscn")
 
 
 func level_3():

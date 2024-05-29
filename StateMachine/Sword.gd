@@ -18,7 +18,9 @@ func onPlayerFacingDirectionChanged(facingRight : bool):
 		facingCollisionShape2D.position = facingCollisionShape2D.facingRightPotion
 
 
-func _on_body_entered(body):
+func _on_body_entered(body : Node2D):
+	if(body.is_in_group("Chest")):
+		body.open()
 	for child in body.get_children():
 		if child is Damageable:
 			
@@ -31,3 +33,10 @@ func _on_body_entered(body):
 				child.hit(damage, Vector2.LEFT)
 			else:
 				child.hit(damage, Vector2.ZERO)
+
+
+@warning_ignore("unused_parameter")
+func _on_hit_box_buttom_body_entered(body : Node2D):
+	for child in player.get_children():
+		if child is Damageable:
+			child.hit(damage, Vector2(0,-1))

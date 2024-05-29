@@ -67,6 +67,8 @@ attack={
 2d_physics/layer_3="Items"
 2d_physics/layer_4="Enime"
 2d_physics/layer_5="Wall"
+2d_physics/layer_6="Chests"
+2d_physics/layer_7="Traps"
 
 [physics]
 

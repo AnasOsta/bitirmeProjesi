@@ -43,12 +43,4 @@ position = Vector2(-202, 130)
 [node name="FullExplorer" parent="." instance=ExtResource("5_wn1ji")]
 position = Vector2(386, 88)
 
-[node name="Right" parent="FullExplorer" index="0"]
-collision_layer = 16
-collision_mask = 0
-
-[node name="Left" parent="FullExplorer" index="1"]
-collision_layer = 16
-collision_mask = 0
-
 [editable path="FullExplorer"]
