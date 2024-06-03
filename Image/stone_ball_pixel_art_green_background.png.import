@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdbsg7ukhlt3p"
-path="res://.godot/imported/Pirate Invasion Game Assets Pixel Art Pack - CraftPix_net.png-da4ad8d743864fcdd2e3987ae60ff0c0.ctex"
+uid="uid://2fdlvyxt1rb0"
+path="res://.godot/imported/stone_ball_pixel_art_green_background.png-b1718e54249063d7b2cd5fae874b268e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/Pirate Invasion Game Assets Pixel Art Pack - CraftPix_net.png"
-dest_files=["res://.godot/imported/Pirate Invasion Game Assets Pixel Art Pack - CraftPix_net.png-da4ad8d743864fcdd2e3987ae60ff0c0.ctex"]
+source_file="res://Image/stone_ball_pixel_art_green_background.png"
+dest_files=["res://.godot/imported/stone_ball_pixel_art_green_background.png-b1718e54249063d7b2cd5fae874b268e.ctex"]
 
 [params]
 

@@ -489,10 +489,10 @@ states/jump_start/position = Vector2(308, -31)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_pb4e3")
 states/move/position = Vector2(228, 181)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_3qtlp"), "move", "jump_start", SubResource("AnimationNodeStateMachineTransition_wd6x2"), "move", "attack1", SubResource("AnimationNodeStateMachineTransition_2qofs"), "move", "dead_hit", SubResource("AnimationNodeStateMachineTransition_u4hfi"), "jump_start", "fall", SubResource("AnimationNodeStateMachineTransition_lx6wj"), "double_jump", "fall", SubResource("AnimationNodeStateMachineTransition_dgih8"), "fall", "jump_end", SubResource("AnimationNodeStateMachineTransition_2802u"), "fall", "double_jump", SubResource("AnimationNodeStateMachineTransition_vdj1i"), "jump_end", "move", SubResource("AnimationNodeStateMachineTransition_07gt1"), "dead_hit", "move", SubResource("AnimationNodeStateMachineTransition_5fye2"), "dead_hit", "dead", SubResource("AnimationNodeStateMachineTransition_i6bjy"), "attack1", "attack2", SubResource("AnimationNodeStateMachineTransition_gveeb"), "attack2", "attack3", SubResource("AnimationNodeStateMachineTransition_cko4i"), "attack2", "move", SubResource("AnimationNodeStateMachineTransition_7j3r3"), "attack3", "move", SubResource("AnimationNodeStateMachineTransition_rc4am"), "attack1", "move", SubResource("AnimationNodeStateMachineTransition_nyg0i")]
-graph_offset = Vector2(-207.618, 43.4412)
+graph_offset = Vector2(-123.618, 172.441)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uci75"]
-size = Vector2(20, 26)
+size = Vector2(27, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fitu0"]
 size = Vector2(18, 23)
@@ -589,7 +589,7 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_6pdsr")
 anim_player = NodePath("../AnimationPlayer")
-parameters/move/blend_position = 0.0
+parameters/move/blend_position = -0.00561798
 
 [node name="Sword" type="Area2D" parent="." node_paths=PackedStringArray("player", "facingCollisionShape2D")]
 collision_layer = 0
@@ -599,7 +599,7 @@ player = NodePath("..")
 facingCollisionShape2D = NodePath("CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
-position = Vector2(20, 0)
+position = Vector2(23.5, 0)
 shape = SubResource("RectangleShape2D_uci75")
 disabled = true
 debug_color = Color(0.996078, 0, 0.184314, 0.419608)

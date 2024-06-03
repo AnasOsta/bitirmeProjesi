@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxi5hus4p43g3"]
+
+[ext_resource type="Script" path="res://Character/Enine/RockBall.gd" id="1_e6dev"]
+[ext_resource type="Texture2D" uid="uid://2fdlvyxt1rb0" path="res://Image/stone_ball_pixel_art_green_background.png" id="2_8e0na"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wt6qi"]
+radius = 40.4969
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1503m"]
+a = Vector2(-2.62891, -47.9375)
+b = Vector2(5.89221, 77.7773)
+
+[node name="PathFollow2D" type="PathFollow2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("path_follow")]
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("1_e6dev")
+path_follow = NodePath("..")
+speed = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_8e0na")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_wt6qi")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(145, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("SegmentShape2D_1503m")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

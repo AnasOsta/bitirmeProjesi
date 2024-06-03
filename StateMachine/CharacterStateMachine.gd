@@ -26,6 +26,8 @@ func _physics_process(delta):
 
 func check_is_can_move():
 	return current_state.can_move
+func check_is_can_attack():
+	return current_state.can_attack
 
 func switch_states(new_state : State):
 	if current_state != null:
