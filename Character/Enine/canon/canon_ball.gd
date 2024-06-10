@@ -8,6 +8,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+@warning_ignore("unused_parameter")
 func _on_area_2d_body_entered(body):
 	$"../../../GameOver".visible = true
 	queue_free()

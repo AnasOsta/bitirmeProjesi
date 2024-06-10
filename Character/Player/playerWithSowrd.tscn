@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://ci6ccgmbn1d7x"]
+[gd_scene load_steps=110 format=3 uid="uid://ci6ccgmbn1d7x"]
 
 [ext_resource type="Script" path="res://Character/Player/player.gd" id="1_i5fdq"]
 [ext_resource type="Texture2D" uid="uid://cvb57tab4hwbo" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="2_fey6d"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://kdcbmecjiv5y" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 01.png" id="16_yast5"]
 [ext_resource type="Texture2D" uid="uid://bhhnhfn2bsmym" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 02.png" id="17_vdjat"]
 [ext_resource type="Texture2D" uid="uid://cngx7os0lul0j" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 03.png" id="18_u33mi"]
+[ext_resource type="AudioStream" uid="uid://w4bnvia5tsgi" path="res://sound effect/sword.mp3" id="19_47d21"]
 [ext_resource type="Texture2D" uid="uid://bcrphjo6yube5" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="19_gmte8"]
 [ext_resource type="Texture2D" uid="uid://c51qgceo2x261" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="20_jnu63"]
 [ext_resource type="Texture2D" uid="uid://jeixaktaiuob" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 06.png" id="21_0qk3p"]
@@ -54,6 +55,8 @@
 [ext_resource type="Texture2D" uid="uid://7sbp1cjvg7p4" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 01.png" id="48_35xki"]
 [ext_resource type="Texture2D" uid="uid://bwpo5ls1nl7yx" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 02.png" id="49_8mhrg"]
 [ext_resource type="Texture2D" uid="uid://df3pmqnbawvjg" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Sword Effects/26-Attack 3/Attack 3 03.png" id="50_ehkw2"]
+[ext_resource type="AudioStream" uid="uid://cinx026b4og7d" path="res://sound effect/cartoon-jump-6462.mp3" id="51_5rvg8"]
+[ext_resource type="AudioStream" uid="uid://cjcu4p44jw8hm" path="res://sound effect/running-in-grass-6237.mp3" id="56_ibglc"]
 [ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="57_80fw3"]
 [ext_resource type="Script" path="res://StateMachine/Sword.gd" id="65_un7pu"]
 [ext_resource type="Script" path="res://StateMachine/FacingCollisionShape2D.gd" id="66_ykc86"]
@@ -111,6 +114,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("56_ibglc")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_oessn"]
 resource_name = "attack1"
@@ -151,6 +178,30 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_47d21")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_40ht6"]
@@ -331,6 +382,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("22_dbp63"), ExtResource("23_rw4dv"), ExtResource("24_oxjcw")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("51_5rvg8")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_70f6e"]
 resource_name = "run"
@@ -347,6 +422,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("16_yast5"), ExtResource("17_vdjat"), ExtResource("18_u33mi"), ExtResource("19_gmte8"), ExtResource("20_jnu63"), ExtResource("21_0qk3p")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("56_ibglc")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wgx6d"]
@@ -584,9 +683,6 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
-libraries = {
-"": SubResource("AnimationLibrary_wgx6d")
-}
 tree_root = SubResource("AnimationNodeStateMachine_6pdsr")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = -0.00561798
@@ -620,6 +716,12 @@ debug_color = Color(0.968627, 0, 0.470588, 0.419608)
 
 [node name="LifeBar" parent="CanvasLayer" node_paths=PackedStringArray("damageasble") instance=ExtResource("57_80fw3")]
 damageasble = NodePath("../../Damageable")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("56_ibglc")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
 
 [connection signal="timeout" from="CharecterStateMachine/Hit/Timer" to="CharecterStateMachine/Hit" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]

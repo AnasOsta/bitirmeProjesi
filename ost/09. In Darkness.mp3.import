@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bel6sngvhayaq"
+path="res://.godot/imported/09. In Darkness.mp3-445dc46baea243871b7adb5ef0103b61.mp3str"
+
+[deps]
+
+source_file="res://ost/09. In Darkness.mp3"
+dest_files=["res://.godot/imported/09. In Darkness.mp3-445dc46baea243871b7adb5ef0103b61.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

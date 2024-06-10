@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e6tx6i11hdbm"
+path="res://.godot/imported/collectcoin-6075.mp3-6fa8316845af9f8028f3c4e687668f2a.mp3str"
+
+[deps]
+
+source_file="res://sound effect/collectcoin-6075.mp3"
+dest_files=["res://.godot/imported/collectcoin-6075.mp3-6fa8316845af9f8028f3c4e687668f2a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cinx026b4og7d"
+path="res://.godot/imported/cartoon-jump-6462.mp3-2c2bbcc1e2c8585276262a9c241007ec.mp3str"
+
+[deps]
+
+source_file="res://sound effect/cartoon-jump-6462.mp3"
+dest_files=["res://.godot/imported/cartoon-jump-6462.mp3-2c2bbcc1e2c8585276262a9c241007ec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

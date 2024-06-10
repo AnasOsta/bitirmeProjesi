@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0nujjia8v8hm"
+path="res://.godot/imported/06. Ruins (Yellow).mp3-bb4e9c4d814cf8476cf6b73bec355a97.mp3str"
+
+[deps]
+
+source_file="res://ost/06. Ruins (Yellow).mp3"
+dest_files=["res://.godot/imported/06. Ruins (Yellow).mp3-bb4e9c4d814cf8476cf6b73bec355a97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
