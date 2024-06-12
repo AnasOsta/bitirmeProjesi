@@ -1,9 +1,10 @@
-[gd_scene load_steps=71 format=3 uid="uid://yqjlevi1rb4k"]
+[gd_scene load_steps=74 format=3 uid="uid://yqjlevi1rb4k"]
 
 [ext_resource type="Script" path="res://Character/Player/player.gd" id="1_d7rd2"]
 [ext_resource type="Texture2D" uid="uid://cvb57tab4hwbo" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="2_bhtk0"]
 [ext_resource type="Texture2D" uid="uid://qilmjl840nhx" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="3_dr4p7"]
 [ext_resource type="Script" path="res://StateMachine/CharacterStateMachine.gd" id="3_qm66r"]
+[ext_resource type="AudioStream" uid="uid://cinx026b4og7d" path="res://sound effect/cartoon-jump-6462.mp3" id="3_vw5b4"]
 [ext_resource type="Script" path="res://StateMachine/GroundState.gd" id="4_1q72l"]
 [ext_resource type="Texture2D" uid="uid://cnbm54ld0eb4p" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="4_veldx"]
 [ext_resource type="Script" path="res://StateMachine/Damageable.gd" id="5_iwafg"]
@@ -22,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://ctipkpvxxp5dk" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="15_gc0nu"]
 [ext_resource type="Texture2D" uid="uid://db1ks7b3uw530" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/04-Fall/Fall 01.png" id="16_1ox1n"]
 [ext_resource type="Texture2D" uid="uid://6f6a6yc5htsu" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 01.png" id="17_8wjd0"]
+[ext_resource type="AudioStream" uid="uid://cn5ncxra4su0f" path="res://sound effect/mixkit-arrow-shot-through-air-2771.wav" id="17_fnjxf"]
 [ext_resource type="Texture2D" uid="uid://dc1mobqy7m3cl" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 02.png" id="18_0mnpa"]
 [ext_resource type="Texture2D" uid="uid://b1nat4gl4yvij" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/06-Hit/Hit 01.png" id="19_s6sy4"]
 [ext_resource type="Texture2D" uid="uid://dhwxsfl8inbr5" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/06-Hit/Hit 02.png" id="20_mlxay"]
@@ -35,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cnbpi6jr2wrsl" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 02.png" id="28_7t36l"]
 [ext_resource type="Texture2D" uid="uid://dm8a41o5qw44m" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 03.png" id="29_2ltvw"]
 [ext_resource type="Texture2D" uid="uid://76fan4l3fpd8" path="res://Image/asset1/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 04.png" id="30_p411k"]
+[ext_resource type="AudioStream" uid="uid://ktnj4e8q0laq" path="res://sound effect/running-in-grass-6237_2.mp3" id="33_ceykf"]
 [ext_resource type="Script" path="res://StateMachine/State.gd" id="36_y5oy4"]
 [ext_resource type="Script" path="res://StateMachine/HitState.gd" id="37_o0pvc"]
 [ext_resource type="PackedScene" uid="uid://ca54u33gba1tj" path="res://Elements/LifeBar/life_bar.tscn" id="38_jnd4u"]
@@ -55,6 +58,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("2_bhtk0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_vw5b4")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_kshu3"]
@@ -120,6 +147,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("19_s6sy4"), ExtResource("20_mlxay"), ExtResource("21_q4753"), ExtResource("22_7yctd")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_fnjxf")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ojk6g"]
 resource_name = "idle"
@@ -136,6 +187,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("2_bhtk0"), ExtResource("3_dr4p7"), ExtResource("4_veldx"), ExtResource("5_ql16f"), ExtResource("6_ct8ya")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_4iqny"]
@@ -169,6 +232,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("13_wec3g"), ExtResource("14_w8vre"), ExtResource("15_gc0nu")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_vw5b4")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_36eox"]
 resource_name = "run"
@@ -185,6 +272,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("7_vxjrn"), ExtResource("8_bxnjn"), ExtResource("9_jjkxj"), ExtResource("10_bw62y"), ExtResource("11_jcehu"), ExtResource("12_thogv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("33_ceykf")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bbwmo"]
@@ -274,7 +385,7 @@ states/jump_start/position = Vector2(361, -45)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_jlc6k")
 states/move/position = Vector2(341, 100)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_41pc1"), "move", "jump_start", SubResource("AnimationNodeStateMachineTransition_olktl"), "jump_end", "move", SubResource("AnimationNodeStateMachineTransition_aaoyf"), "move", "dead_hit", SubResource("AnimationNodeStateMachineTransition_6xp31"), "dead_hit", "dead", SubResource("AnimationNodeStateMachineTransition_l1jee"), "jump_start", "fall", SubResource("AnimationNodeStateMachineTransition_0tgdq"), "double_jump", "fall", SubResource("AnimationNodeStateMachineTransition_shho0"), "fall", "jump_end", SubResource("AnimationNodeStateMachineTransition_smewi"), "fall", "double_jump", SubResource("AnimationNodeStateMachineTransition_y65tu"), "dead_hit", "move", SubResource("AnimationNodeStateMachineTransition_tmbip")]
-graph_offset = Vector2(-143, -144.508)
+graph_offset = Vector2(-160, -25.508)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 14
@@ -294,12 +405,16 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_bbwmo")
+}
 tree_root = SubResource("AnimationNodeStateMachine_kbru4")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = -0.0015015
 
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("5_iwafg")
+health = 10.0
 
 [node name="CharecterStateMachine" type="Node" parent="." node_paths=PackedStringArray("character", "animation_tree", "current_state")]
 script = ExtResource("3_qm66r")
@@ -331,6 +446,8 @@ script = ExtResource("37_o0pvc")
 damageasble = NodePath("../../Damageable")
 deadState = NodePath("../Dead")
 returnState = NodePath("../Ground")
+deadAnimatoinNode = "dead"
+hitAnimationString = "dead_hit"
 
 [node name="Timer" type="Timer" parent="CharecterStateMachine/Hit"]
 wait_time = 0.25
@@ -343,6 +460,9 @@ script = ExtResource("36_y5oy4")
 
 [node name="LifeBar" parent="CanvasLayer" node_paths=PackedStringArray("damageasble") instance=ExtResource("38_jnd4u")]
 damageasble = NodePath("../../Damageable")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vw5b4")
 
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharecterStateMachine/Landing" method="_on_animation_tree_animation_finished"]

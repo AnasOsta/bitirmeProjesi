@@ -8,6 +8,8 @@ func level_1():
 
 
 func level_2():
+	@warning_ignore("unused_variable")
+	var level2 = preload("res://Levels/level_2.tscn")
 	LoadingManager.load_scene("res://Levels/level_2.tscn")
 
 

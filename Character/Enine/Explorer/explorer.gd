@@ -6,7 +6,7 @@ var direction = -1
 var iSeePlayer = false
 var isInArea = false
 var run = false
-
+@export var damage : int = 10
 @export var sceneStr : String = ""
 
 @onready var dialog : AnimatedSprite2D = $Marker2D/dialog
@@ -62,10 +62,21 @@ func _on_entred_area(body):
 
 @warning_ignore("unused_parameter")
 func _on_dead_player_body_entered(body):
-	$"../../../GameOver".visible = true
-	#TransBlack.change_scene_string(sceneStr)
+	for child in body.get_children():
+		if child is Damageable:
+			
+			var directionToDamageable = body.global_position - get_parent().global_position
+			var directionSign = sign(directionToDamageable.x)
+			
+			if directionSign > 0:
+				child.hit(damage, Vector2.RIGHT)
+			elif directionSign < 0:
+				child.hit(damage, Vector2.LEFT)
+			else:
+				child.hit(damage, Vector2.ZERO)
 
 
+@warning_ignore("unused_parameter")
 func _player_finded(body):
 	$Marker2D.scale.x = direction
 	direction *= -1

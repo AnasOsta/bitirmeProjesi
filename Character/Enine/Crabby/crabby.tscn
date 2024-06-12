@@ -211,7 +211,7 @@ transitions = ["Hit", "Dead", SubResource("AnimationNodeStateMachineTransition_g
 graph_offset = Vector2(-101, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36a8g"]
-size = Vector2(17, 12)
+size = Vector2(21, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jt02"]
 size = Vector2(72, 15)
@@ -242,6 +242,9 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_1ixe4")
+}
 tree_root = SubResource("AnimationNodeStateMachine_fyyyf")
 anim_player = NodePath("../AnimationPlayer")
 
@@ -282,12 +285,12 @@ can_move = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
-position = Vector2(-23.5, 5)
+position = Vector2(-25, 4.5)
 shape = SubResource("RectangleShape2D_36a8g")
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Attack"]
-position = Vector2(28, 5)
+position = Vector2(28.5, 5)
 shape = SubResource("RectangleShape2D_36a8g")
 disabled = true
 

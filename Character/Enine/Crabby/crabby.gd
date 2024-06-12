@@ -45,11 +45,11 @@ func _on_timer_timeout():
 	if state_machine.current_state.can_attack: 
 		playback.travel(attackAnimationString)
 
-func _on_attack_body_entered(body):
+func _on_attack_body_entered(body : Node2D):
 	for child in body.get_children():
 		if child is Damageable && state_machine.current_state.can_attack :
 			
-			var directionToDamageable = body.global_position - get_parent().global_position
+			var directionToDamageable = body.global_position - global_position
 			var directionSign = sign(directionToDamageable.x)
 			
 			if directionSign > 0:

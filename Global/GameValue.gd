@@ -2,6 +2,7 @@ extends Node
 
 var music : bool = true
 var sfx : bool = true
-var volume : float = 100
+var volume : float = -20
 var score : int = 0
-var highestScore = 0
+var highestScore : int = 0
+var smallMap : int = 0

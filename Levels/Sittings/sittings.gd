@@ -20,6 +20,10 @@ func _on_music_pressed():
 	trueMusic.visible = !trueMusic.visible 
 	falseMusic.visible = !falseMusic.visible
 	GameValue.music = !GameValue.music
+	if GameValue.music:
+		$"/root/SceneMusic".play()
+	else :
+		$"/root/SceneMusic".stop()
 
 
 func _on_sfx_pressed():

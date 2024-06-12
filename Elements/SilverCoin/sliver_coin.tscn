@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cw22qtl6ojitx"]
+[gd_scene load_steps=13 format=3 uid="uid://cw22qtl6ojitx"]
 
 [ext_resource type="Texture2D" uid="uid://cwvjp8ail8m8p" path="res://Image/asset1/Pirate Treasure/Silver Coin/01.png" id="1_aiqqe"]
 [ext_resource type="Script" path="res://Elements/coin.gd" id="1_rmwb2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dkk513d4cdn0u" path="res://Image/asset1/Pirate Treasure/Coin Effect/02.png" id="6_7120f"]
 [ext_resource type="Texture2D" uid="uid://ci75fceh2fhoi" path="res://Image/asset1/Pirate Treasure/Coin Effect/03.png" id="7_dbvlh"]
 [ext_resource type="Texture2D" uid="uid://8pjyptfm25mp" path="res://Image/asset1/Empty.png" id="8_fq2l8"]
+[ext_resource type="AudioStream" uid="uid://e6tx6i11hdbm" path="res://sound effect/collectcoin-6075.mp3" id="10_pmutl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cofje"]
 animations = [{
@@ -67,6 +68,9 @@ collision_layer = 4
 shape = SubResource("CircleShape2D_cbei4")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_pmutl")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

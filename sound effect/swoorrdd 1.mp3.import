@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbrax051pbdvj"
+path="res://.godot/imported/swoorrdd 1.mp3-672974bd2e3d98960519924cb840e1d2.mp3str"
+
+[deps]
+
+source_file="res://sound effect/swoorrdd 1.mp3"
+dest_files=["res://.godot/imported/swoorrdd 1.mp3-672974bd2e3d98960519924cb840e1d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

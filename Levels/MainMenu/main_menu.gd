@@ -1,8 +1,9 @@
 extends Node2D
-
+const stream = preload("res://ost/undertale-ost-012-home-made-with-Voicemod.mp3")
 func _ready():
 	if GameValue.score > GameValue.highestScore:
 		GameValue.highestScore = GameValue.score
+	SceneMusic.play_music(stream)
 
 func _on_sittings_pressed():
 	TransBlack.change_scene_string("res://Levels/Sittings/sittings.tscn")
@@ -13,6 +14,7 @@ func _on_levels_pressed():
 
 
 func _on_play_pressed():
+	preload("res://Levels/level_1.tscn")
 	LoadingManager.load_scene("res://Levels/level_1.tscn")
 
 

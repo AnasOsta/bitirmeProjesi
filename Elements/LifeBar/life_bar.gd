@@ -5,6 +5,7 @@ var kalanYasam : float
 var olcek : float
 @export var kirmiziCizgi : Node2D
 @export var damageasble : Damageable
+@export var game_over : CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,4 +26,6 @@ func onDamageableHit (node : Node, damageAmount : int, knockBack_direction : Vec
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta):
+	if kalanYasam == 0:
+		game_over.visible = true
 	pass

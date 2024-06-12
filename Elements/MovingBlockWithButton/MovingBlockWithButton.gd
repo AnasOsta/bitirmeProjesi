@@ -12,6 +12,7 @@ func _process(delta):
 		path_follow.progress += speed * delta
 
 
+@warning_ignore("unused_parameter")
 func _on_area_2d_body_entered(body):
 	if key:
 		$"../../Button".play("effect")
@@ -19,6 +20,7 @@ func _on_area_2d_body_entered(body):
 		start = true
 
 
+@warning_ignore("unused_parameter")
 func _on_key_body_entered(body):
 	$Key.play("effect")
 

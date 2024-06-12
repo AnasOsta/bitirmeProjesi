@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmbejm2cr11j4"
+path="res://.godot/imported/sword 3.mp3-637b7cbb5c93460e3a6c1b755cc93dbe.mp3str"
+
+[deps]
+
+source_file="res://sound effect/sword 3.mp3"
+dest_files=["res://.godot/imported/sword 3.mp3-637b7cbb5c93460e3a6c1b755cc93dbe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

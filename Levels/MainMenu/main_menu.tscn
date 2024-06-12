@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bjyjb0w2gom1x"]
+[gd_scene load_steps=44 format=3 uid="uid://bjyjb0w2gom1x"]
 
 [ext_resource type="Script" path="res://Levels/MainMenu/main_menu.gd" id="1_0crop"]
 [ext_resource type="Texture2D" uid="uid://cxcveje4ebl6j" path="res://Image/asset1/Wood and Paper UI/Prefabs/3.png" id="1_qydg8"]
@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://c1n3eb8ji8dp6" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/5.png" id="24_m35ch"]
 [ext_resource type="Texture2D" uid="uid://rkk6vqp3lo42" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/24.png" id="25_vdbly"]
 [ext_resource type="Texture2D" uid="uid://chfij0i60c5vr" path="res://Image/asset1/Wood and Paper UI/Small Text/Small Text/20.png" id="26_ynxks"]
-[ext_resource type="AudioStream" uid="uid://c2ulup35jdtgb" path="res://ost/undertale-ost-012-home-made-with-Voicemod.mp3" id="32_xm532"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6jbuw"]
 texture = ExtResource("1_qydg8")
@@ -357,10 +356,6 @@ offset_right = 132.0
 offset_bottom = 138.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8o3kw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j1ge6")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("32_xm532")
-autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Sittings" to="." method="_on_sittings_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/Panel/Levels" to="." method="_on_levels_pressed"]

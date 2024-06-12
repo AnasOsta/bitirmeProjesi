@@ -21,10 +21,12 @@ SignaBus="*res://Global/SignaBus.gd"
 TransBlack="*res://Elements/Transitions/WhiteToBlack/trans_black.tscn"
 LoadingManager="*res://Elements/Transitions/Loading/LoadingManager.gd"
 GameValue="*res://Global/GameValue.gd"
+SceneMusic="*res://Music/scene_music.tscn"
 
 [display]
 
 window/size/viewport_width=1024
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]
